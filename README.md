@@ -7,6 +7,9 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
  [PRATİK 3](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-3) |
  [PRATİK 4](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-4) |
  [PRATİK 5](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-5) |
+ 
+ | [ÖDEV 1](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-1) |
+
 
 ---
 
@@ -135,12 +138,12 @@ Java ile kullanıcıdan dik kenarlarının uzunluğunu alan ve hipotenüsü hesa
 :interrobang:
 Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
 
-Formül
-Üçgenin çevresi = 2𝑢
 
-𝑢 = (a+b+c) / 2
+:pushpin: Formül : Üçgenin çevresi = 2𝑢
 
-Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
+:pushpin: Formül : 𝑢 = (a+b+c) / 2
+
+:pushpin: Formül : Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
 
 
 ### :green_square: CEVAP
@@ -245,16 +248,16 @@ public class TaksiMetre {
 Dairenin Alanını ve Çevresini Hesaplayan Program
 Java ile yarı çapını kullanıcıdan aldığınız dairenin alanını ve çevresini hesaplayan programı yazın.
 
-Alan Formülü : π * r * r;
+:pushpin: Alan Formülü : π * r * r;
 
-Çevre Formülü : 2 * π * r;
+:pushpin: Çevre Formülü : 2 * π * r;
 
 :interrobang:
 Yarıçapı r, merkez açısısının ölçüsü 𝛼 olan daire diliminin alanı bulan programı yazınız.
 
 𝜋 sayısını = 3.14 alınız.
 
-Formül : (𝜋 * (r*r) * 𝛼) / 360
+:pushpin: Formül : (𝜋 * (r*r) * 𝛼) / 360
 
 ### :green_square: CEVAP
 
@@ -290,6 +293,53 @@ public class DaireAlanCevre {
         // Daire diliminin alanı hesaplanarak ekrana yazdırıldı.
         daireDilimAlan=(pi*(yarıCap*yarıCap)*merkezAcı)/360;
         System.out.println("Daire diliminin alanı : " + daireDilimAlan + "cm\u00B2");
+    }
+}
+
+```
+</details> 
+
+## :open_book: ÖDEV 1	
+
+### SORU :question:
+Vücut Kitle İndeksi Hesaplama
+Java ile kullanıcıdan boy ve kilo değerlerini alıp bir değişkene atayın. Aşağıda ki formüle göre kullanıcının "Vücut Kitle İndeks" değerini hesaplayıp ekrana yazdırın.
+
+:pushpin: Formül : Kilo (kg) / Boy(m) * Boy(m)
+
+
+:heavy_check_mark: Çıktısı
+```
+Lütfen boyunuzu (metre cinsinde) giriniz : 1,72
+Lütfen kilonuzu giriniz : 105
+Vücut Kitle İndeksiniz : 35.49215792320173
+```
+ 
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev1;
+import java.util.Scanner;
+
+public class VucutKitleIndeksi {
+    public static void main(String[] args) {
+
+        // Değişkenler tanımlandı ve veri girişi için scanner kodu kullanıldı.
+        double boy, kilo, kitleIndeks;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Lütfen boyunuzu (metre cinsinde) giriniz : ");
+        boy = input.nextDouble();
+
+        System.out.print("Lütfen kilonuzu giriniz : ");
+        kilo = input.nextDouble();
+
+        // Vücut Kitle İndeksi hesaplanarak ekrana yazdırıldı.
+        kitleIndeks = kilo / (boy * boy);
+        System.out.print("Vücut Kitle İndeksiniz : " + kitleIndeks);
     }
 }
 
