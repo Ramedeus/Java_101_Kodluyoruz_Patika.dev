@@ -2,7 +2,7 @@
 
 Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış olduğum repo. İçerisinde Java pratik ve ödevlerinin soru ve cevaplarını içeren bir adet README dosyası barındırıyor.
 
-| [PRATİK 1](https://github.com/Ramedeus/SQL/blob/main/README.md#open_book-%C3%B6dev-1) |
+| [PRATİK 1](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-1) |
 
 ---
 
