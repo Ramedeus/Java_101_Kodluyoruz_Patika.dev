@@ -8,7 +8,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
  [PRATİK 4](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-4) |
  [PRATİK 5](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-5) |
  
- | [ÖDEV 1](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-1) |
+ | [ÖDEV 1](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-%C3%B6dev-1) |
 
 
 ---
