@@ -4,6 +4,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 
 | [PRATİK 1](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-1) |
  [PRATİK 2](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-2) |
+ [PRATİK 3](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-3) |
 
 ---
 
@@ -123,6 +124,77 @@ public class KDVHesaplama {
 ```
 </details>
 
+## :open_book: PRATİK 3	
+
+### SORU :question:
+Dik Üçgende Hipotenüs Bulan Program
+Java ile kullanıcıdan dik kenarlarının uzunluğunu alan ve hipotenüsü hesaplayan programı yazın.
+
+:interrobang:
+Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
+
+Formül
+Üçgenin çevresi = 2𝑢
+
+𝑢 = (a+b+c) / 2
+
+Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik3;
+import java.util.Scanner;
+
+public class Hipotenus {
+    public static void main(String[] args) {
+    // Değişkenler tanımlandı ve veri girişi için scanner kodu kullanıldı.
+
+    double  a, b, c;
+    Scanner input = new Scanner(System.in);
+
+    // Dik üçgenin 1. ve 2. kenarı kullanıcıdan istendi.
+    System.out.print("Diküçgenin 1. kenarını giriniz :");
+    a = input.nextDouble();
+
+    System.out.print("Diküçgenin 2. kenarını giriniz :");
+    b = input.nextDouble();
+
+    // Hipotenüs hesaplandı.
+    c = Math.sqrt ((a*a)+(b*b));
+    System.out.println("Hipotenüs :" + c);
+
+
+    // Üçgen alanını bulma ÖDEV
+    System.out.println("Bir Üçgenin Alanının Hesaplaması");
+
+    // Üçgenin kenarları kullanıcıdan istendi.
+    System.out.print("Üçgenin 1. kenarını giriniz :");
+    a = input.nextInt();
+
+    System.out.print("Üçgenin 2. kenarını giriniz :");
+    b = input.nextInt();
+
+    System.out.print("Üçgenin 3. kenarını giriniz :");
+    c = input.nextInt();
+
+    // Hesaplamalar için değişkenler oluşturuldu.
+    double alan, u;
+
+    // Hesaplamalar yapıldı ve üçgenin alanı ekrana bastırıldı.
+    u=(a+b+c)/2;
+    alan = Math.sqrt (u*(u-a)*(u-b)*(u-c));
+
+    System.out.print("Üçgenin alanı :" + alan);
+    }
+}
+```
+</details> 
+ 
 ---
 
 ## Contributing :hammer_and_wrench:	
