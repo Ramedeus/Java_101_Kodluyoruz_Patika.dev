@@ -73,3 +73,16 @@ Aynı program içerisinde koşullu ifadeler kullanılarak, eğer kullanıcının
 }
 ```
 </details>
+
+---
+
+## Contributing :hammer_and_wrench:	
+Hatalar, öneriler ve değişiklikler için lütfen bir konu açınız.
+
+## License :notebook_with_decorative_cover:
+
+[MIT](https://www.google.com/search?q=mit+license&oq=mit+license&aqs=chrome.0.0l4j0i22i30l6.2910j0j7&sourceid=chrome&ie=UTF-8)
+
+
+![Lorem Picsum](https://picsum.photos/200/300)
+
