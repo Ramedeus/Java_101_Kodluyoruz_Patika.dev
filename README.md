@@ -9,6 +9,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
  [PRATİK 5](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-5) |
  
  | [ÖDEV 1](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-%C3%B6dev-1) |
+  [ÖDEV 2](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-%C3%B6dev-2) |
 
 
 ---
@@ -342,6 +343,72 @@ public class VucutKitleIndeksi {
         System.out.print("Vücut Kitle İndeksiniz : " + kitleIndeks);
     }
 }
+
+```
+</details> 
+
+## :open_book: ÖDEV 2	
+
+### SORU :question:
+Manav Kasa Programı
+Java ile kullanıcıların manavdan almış oldukları ürünlerin kilogram değerlerine göre toplam tutarını ekrana yazdıran programı yazın.
+
+:pushpin: Meyveler ve KG Fiyatları
+
+-Armut : 2,14 TL   
+-Elma : 3,67 TL  
+-Domates : 1,11 TL  
+-Muz: 0,95 TL  
+-Patlıcan : 5,00 TL  
+
+
+:heavy_check_mark: Örnek Çıktı
+```
+Armut Kaç Kilo ? :0
+Elma Kaç Kilo ? :1
+Domates Kaç Kilo ? :1
+Muz Kaç Kilo ? :2
+Patlıcan Kaç Kilo ? :3
+Toplam Tutar : 21.68 TL
+```
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev2;
+import java.util.Scanner;
+
+public class ManavKasa {
+    public static void main(String[] args) {
+
+        // Değişkenler tanımlandı ve veri girişi için scanner kodu kullanıldı.
+        double armutKg=2.14, elmaKg=3.67, domatesKg=1.11, muzKg=0.95, patlicanKg=5, armut, elma, domates, muz, patlican, toplamTutar;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Armut Kaç Kilo ? :");
+        armut = input.nextFloat();
+
+        System.out.print("Elma Kaç Kilo ? :");
+        elma = input.nextFloat();
+
+        System.out.print("Domates Kaç Kilo ? :");
+        domates = input.nextFloat();
+
+        System.out.print("Muz Kaç Kilo ? :");
+        muz = input.nextFloat();
+
+        System.out.print("Patlıcan Kaç Kilo ? :");
+        patlican = input.nextFloat();
+
+        // Toplam tutar hesaplanarak ekrana yazdırıldı.
+        toplamTutar=(armut*armutKg)+(elma*elmaKg)+(domates*domatesKg)+(muz*muzKg)+(patlican*patlicanKg);
+        System.out.print("Toplam Tutar :" + toplamTutar + " TL");
+    }
+}
+
 
 ```
 </details> 
