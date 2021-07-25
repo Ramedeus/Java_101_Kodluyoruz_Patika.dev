@@ -1,4 +1,4 @@
-# Java-101---Kodluyoruz---Patika-Dev
+# Java 101 - Kodluyoruz / Patika.dev
 
 Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış olduğum repo. İçerisinde Java pratik ve ödevlerinin soru ve cevaplarını içeren bir adet README dosyası barındırıyor.
 
