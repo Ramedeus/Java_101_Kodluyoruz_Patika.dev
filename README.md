@@ -5,6 +5,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 1](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-1) |
  [PRATİK 2](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-2) |
  [PRATİK 3](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-3) |
+ [PRATİK 4](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-4) |
 
 ---
 
@@ -194,6 +195,48 @@ public class Hipotenus {
 }
 ```
 </details> 
+
+## :open_book: PRATİK 4	
+
+### SORU :question:
+Java ile gidilen mesafeye (KM) göre taksimetre tutarını ekrana yazdıran programı yazın.
+
+-Taksimetre KM başına 2.20 TL tutmaktadır.
+
+-Minimum ödenecek tutar 20 TL'dir. 20 TL altında ki ücretlerde yine 20 TL alınacaktır.
+
+-Taksimetre açılış ücreti 10 TL'dir.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik4;
+import java.util.Scanner;
+
+public class TaksiMetre {
+    public static void main(String[] args) {
+
+    // Değişkenler tanımlandı ve veri girişi için scanner kodu kullanıldı.
+    double km, katSayı = 2.2, minUcret = 20, acılısUcret=10, toplamUcret, odenecekUcret;
+    Scanner input = new Scanner(System.in);
+    System.out.print("Taksimetre uygulaması için KM değerini giriniz : ");
+    km = input.nextDouble();
+
+    // Toplam ücret hesaplandı ve km başına olan ücret hesaplanarak sorgulatıldı.
+    toplamUcret = acılısUcret+(km*katSayı);
+    boolean kosul1 = toplamUcret < 20;
+    odenecekUcret = kosul1 ? minUcret : toplamUcret;
+
+    // Hesaplanan ücret ekrana basıldı.
+    System.out.print("Toplam ödenecek ücret = " + odenecekUcret + " TL");
+    }
+}
+
+```
+</details>
  
 ---
 
