@@ -6,6 +6,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
  [PRATİK 2](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-2) |
  [PRATİK 3](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-3) |
  [PRATİK 4](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-4) |
+ [PRATİK 5](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-5) |
 
 ---
 
@@ -237,6 +238,63 @@ public class TaksiMetre {
 
 ```
 </details>
+
+## :open_book: PRATİK 5	
+
+### SORU :question:
+Dairenin Alanını ve Çevresini Hesaplayan Program
+Java ile yarı çapını kullanıcıdan aldığınız dairenin alanını ve çevresini hesaplayan programı yazın.
+
+Alan Formülü : π * r * r;
+
+Çevre Formülü : 2 * π * r;
+
+:interrobang:
+Yarıçapı r, merkez açısısının ölçüsü 𝛼 olan daire diliminin alanı bulan programı yazınız.
+
+𝜋 sayısını = 3.14 alınız.
+
+Formül : (𝜋 * (r*r) * 𝛼) / 360
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik5;
+import java.util.Scanner;
+
+public class DaireAlanCevre {
+    public static void main(String[] args) {
+        // Değişkenler tanımlandı ve veri girişi için scanner kodu kullanıldı.
+        double yarıCap, alan, cevre, pi=3.14;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Dairenin yarıçapını (cm cisinden) giriniz : ");
+        yarıCap = input.nextDouble();
+
+        // Alan ve cevre hesaplanarak ekrana yazdırıldı.
+        alan = pi*yarıCap*yarıCap;
+        System.out.println("Dairenin alanı : " + alan + "cm\u00B2");
+
+        cevre = 2*pi*yarıCap;
+        System.out.println("Dairenin çevresi : " + cevre + "cm");
+
+        // Daire diliminin alanını bulma ÖDEV
+        // Değişkenler tanımlandı ve veri girişi için scanner kodu kullanıldı.
+        double merkezAcı, daireDilimAlan;
+        System.out.print("Dairenin merkez açısını giriniz : ");
+        merkezAcı = input.nextDouble();
+
+        // Daire diliminin alanı hesaplanarak ekrana yazdırıldı.
+        daireDilimAlan=(pi*(yarıCap*yarıCap)*merkezAcı)/360;
+        System.out.println("Daire diliminin alanı : " + daireDilimAlan + "cm\u00B2");
+    }
+}
+
+```
+</details> 
  
 ---
 
