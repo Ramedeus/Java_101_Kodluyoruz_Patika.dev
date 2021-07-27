@@ -5,7 +5,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | PRATİKLER | ÖDEVLER |
 |-----|-----|
 | [PRATİK 1](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-1--not-ortalamas%C4%B1) - Not Ortalaması | [ÖDEV 1](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-1--v%C3%BCcut-kitle-i%CC%87ndeksi-hesaplama) - Vücut Kitle İndeksi Hesaplama|
-| [PRATİK 2](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-2--manav-kasa) - KDV Hesaplama |[ÖDEV 2](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-%C3%B6dev-2) - Manav Kasa |
+| [PRATİK 2](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-2--kdv-hesaplama) - KDV Hesaplama |[ÖDEV 2](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-2--manav-kasa) - Manav Kasa |
 | [PRATİK 3](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-3--hipoten%C3%BCs-bulma) - Hipotenüs Bulma|
 | [PRATİK 4](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-4--taksimetre) - Taksimetre |
 | [PRATİK 5](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-5--daire--alan--%C3%A7evre) - Daire & Alan & Çevre |
