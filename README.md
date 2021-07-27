@@ -355,9 +355,14 @@ public class HesapMakinesi {
                 System.out.print("Çarpma sonucu = " + sonuc);
                 break;
             case '/':
-                sonuc = sayi1 / sayi2;
-                System.out.print("Bölme sonucu = " + sonuc);
-                break;
+                if (sayi2 == 0) {
+                    System.out.print("Bir sayı sıfıra bölünemez");
+                    break;
+                } else {
+                    sonuc = sayi1 / sayi2;
+                    System.out.print("Bölme sonucu = " + sonuc);
+                    break;
+                }
             default:
                 System.out.print("Lütfen +, -, * veya / işlemlerinden birini seçiniz.");
                 break;
