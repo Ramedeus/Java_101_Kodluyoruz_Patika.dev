@@ -320,16 +320,16 @@ public class HesapMakinesi {
     public static void main(String[] args) {
 
         // Değişkenler tanımlandı. Sayısal işlemler için double yapılacak olan hesaplamalar operatörler için char kullanıldı.
-        double sayı1, sayı2, sonuc;
+        double sayi1, sayi2, sonuc;
         char islem;
         Scanner input = new Scanner(System.in);
 
         // 1. ve 2. sayılar kullanıcıdan istendi. Ardından gerçekleştirilecek işlemin operatörü istendi.
         System.out.print("1. Sayıyı giriniz :");
-        sayı1 = input.nextInt();
+        sayi1 = input.nextInt();
 
         System.out.print("2. Sayıyı giriniz :");
-        sayı2 = input.nextInt();
+        sayi2 = input.nextInt();
 
         System.out.println("+ ( Toplama )");
         System.out.println("- ( Çıkarma )");
@@ -343,19 +343,19 @@ public class HesapMakinesi {
         // Hesaplama yapılması için switch-case kullanıldı ve sonuç ekrana bastırıldı.
         switch (islem) {
             case '+':
-                sonuc = sayı1 + sayı2;
+                sonuc = sayi1 + sayi2;
                 System.out.print("Toplama sonucu = " + sonuc);
                 break;
             case '-':
-                sonuc = sayı1 - sayı2;
+                sonuc = sayi1 - sayi2;
                 System.out.print("Çıkarma sonucu = " + sonuc);
                 break;
             case '*':
-                sonuc = sayı1 * sayı2;
+                sonuc = sayi1 * sayi2;
                 System.out.print("Çarpma sonucu = " + sonuc);
                 break;
             case '/':
-                sonuc = sayı1 / sayı2;
+                sonuc = sayi1 / sayi2;
                 System.out.print("Bölme sonucu = " + sonuc);
                 break;
             default:
