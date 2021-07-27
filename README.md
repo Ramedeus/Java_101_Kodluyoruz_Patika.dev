@@ -2,15 +2,14 @@
 
 Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış olduğum repo. İçerisinde Java pratik ve ödevlerinin soru ve cevaplarını içeren bir adet README dosyası barındırıyor.
 
-| [PRATİK 1](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-1) |
- [PRATİK 2](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-2) |
- [PRATİK 3](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-3) |
- [PRATİK 4](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-4) |
- [PRATİK 5](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-5) |
- 
- | [ÖDEV 1](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-%C3%B6dev-1) |
-  [ÖDEV 2](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-%C3%B6dev-2) |
-
+| PRATİKLER | ÖDEVLER |
+|-----|-----|
+| [PRATİK 1](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-1) - Not Ortalaması | [ÖDEV 1](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-%C3%B6dev-1) - Vücut Kitle İndeksi Hesaplama|
+| [PRATİK 2](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-2) - KDV Hesaplama |[ÖDEV 2](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-%C3%B6dev-2) - Manav Kasa |
+| [PRATİK 3](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-3) - Hipotenüs Bulma|
+| [PRATİK 4](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-4) - Taksimetre |
+| [PRATİK 5](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-5) - Daire & Alan & Çevre |
+| [PRATİK 6](https://github.com/Ramedeus/Java-101---Kodluyoruz---Patika-Dev/blob/main/README.md#open_book-prati%CC%87k-6) - Hesap Makinesi|
 
 ---
 
@@ -294,6 +293,76 @@ public class DaireAlanCevre {
         // Daire diliminin alanı hesaplanarak ekrana yazdırıldı.
         daireDilimAlan=(pi*(yarıCap*yarıCap)*merkezAcı)/360;
         System.out.println("Daire diliminin alanı : " + daireDilimAlan + "cm\u00B2");
+    }
+}
+
+```
+</details> 
+ 
+## :open_book: PRATİK 6	
+
+### SORU :question:
+Java koşullu ifadeler ile basit hesap makinesi yapımı.
+
+:pushpin: Hesap makinesini switch-case kullanarak yapınız
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik6;
+
+import java.util.Scanner;
+
+public class HesapMakinesi {
+    public static void main(String[] args) {
+
+        // Değişkenler tanımlandı. Sayısal işlemler için double yapılacak olan hesaplamalar operatörler için char kullanıldı.
+        double sayı1, sayı2, sonuc;
+        char islem;
+        Scanner input = new Scanner(System.in);
+
+        // 1. ve 2. sayılar kullanıcıdan istendi. Ardından gerçekleştirilecek işlemin operatörü istendi.
+        System.out.print("1. Sayıyı giriniz :");
+        sayı1 = input.nextInt();
+
+        System.out.print("2. Sayıyı giriniz :");
+        sayı2 = input.nextInt();
+
+        System.out.println("+ ( Toplama )");
+        System.out.println("- ( Çıkarma )");
+        System.out.println("* ( Çarpma )");
+        System.out.println("/ ( Bölme )");
+        System.out.print("Yapmak istediğiniz işlem için ilgili sayıyı seçiniz:");
+
+        // Operatör işlemi için char değeri değişkene atandı.
+        islem = input.next().charAt(0);
+
+        // Hesaplama yapılması için switch-case kullanıldı ve sonuç ekrana bastırıldı.
+        switch (islem) {
+            case '+':
+                sonuc = sayı1 + sayı2;
+                System.out.print("Toplama sonucu = " + sonuc);
+                break;
+            case '-':
+                sonuc = sayı1 - sayı2;
+                System.out.print("Çıkarma sonucu = " + sonuc);
+                break;
+            case '*':
+                sonuc = sayı1 * sayı2;
+                System.out.print("Çarpma sonucu = " + sonuc);
+                break;
+            case '/':
+                sonuc = sayı1 / sayı2;
+                System.out.print("Bölme sonucu = " + sonuc);
+                break;
+            default:
+                System.out.print("Lütfen +, -, * veya / işlemlerinden birini seçiniz.");
+                break;
+
+        }
     }
 }
 
