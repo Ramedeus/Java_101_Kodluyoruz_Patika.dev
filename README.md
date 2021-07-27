@@ -13,7 +13,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 
 ---
 
-## :open_book: PRATİK 1	
+## :open_book: PRATİK 1	- Not Ortalaması
 
 ### SORU :question:
 Not Ortalaması Hesaplayan Program
@@ -71,7 +71,7 @@ public class NotOrtalamasi {
 ```
 </details>
 
-## :open_book: PRATİK 2	
+## :open_book: PRATİK 2	- KDV Hesaplama
 
 ### SORU :question:
 KDV Tutarı Hesaplayan Program
@@ -129,7 +129,7 @@ public class KDVHesaplama {
 ```
 </details>
 
-## :open_book: PRATİK 3	
+## :open_book: PRATİK 3	- Hipotenüs Bulma
 
 ### SORU :question:
 Dik Üçgende Hipotenüs Bulan Program
@@ -200,7 +200,7 @@ public class Hipotenus {
 ```
 </details> 
 
-## :open_book: PRATİK 4	
+## :open_book: PRATİK 4	- Taksimetre
 
 ### SORU :question:
 Java ile gidilen mesafeye (KM) göre taksimetre tutarını ekrana yazdıran programı yazın.
@@ -242,7 +242,7 @@ public class TaksiMetre {
 ```
 </details>
 
-## :open_book: PRATİK 5	
+## :open_book: PRATİK 5	- Daire & Alan & Çevre
 
 ### SORU :question:
 Dairenin Alanını ve Çevresini Hesaplayan Program
@@ -299,7 +299,7 @@ public class DaireAlanCevre {
 ```
 </details> 
  
-## :open_book: PRATİK 6	
+## :open_book: PRATİK 6	- Hesap Makinesi
 
 ### SORU :question:
 Java koşullu ifadeler ile basit hesap makinesi yapımı.
@@ -369,7 +369,7 @@ public class HesapMakinesi {
 ```
 </details> 
 
-## :open_book: ÖDEV 1	
+## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
 ### SORU :question:
 Vücut Kitle İndeksi Hesaplama
@@ -416,7 +416,7 @@ public class VucutKitleIndeksi {
 ```
 </details> 
 
-## :open_book: ÖDEV 2	
+## :open_book: ÖDEV 2	- Manav Kasa
 
 ### SORU :question:
 Manav Kasa Programı
