@@ -11,7 +11,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 5](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-5--daire--alan--%C3%A7evre) - Daire & Alan & Çevre |
 | [PRATİK 6](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-6--hesap-makinesi) - Hesap Makinesi|
 | [PRATİK 7](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-7--kullan%C4%B1c%C4%B1-giri%C5%9Fi) - Kullanıcı Girişi|
-| [PRATİK 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-7--kullan%C4%B1c%C4%B1-giri%C5%9Fi) - Sınıfı Geçme Durumu|
+| [PRATİK 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-8--s%C4%B1n%C4%B1f%C4%B1-ge%C3%A7me-durumu) - Sınıfı Geçme Durumu|
 
 ---
 
