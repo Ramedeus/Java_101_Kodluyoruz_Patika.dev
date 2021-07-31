@@ -77,15 +77,11 @@ public class NotOrtalamasi {
 
 ### SORU :question:
 KDV Tutarı Hesaplayan Program
-Java ile kullanıcıdan alınan para değerinin KDV'li fiyatını ve KDV tutarını hesaplayıp ekrana bastıran programı yazın.
+Java ile kullanıcıdan alınan para değerinin KDV'li fiyatını ve KDV tutarını hesaplayıp ekrana bastıran programı yazın. (Not : KDV tutarını 18% olarak alın)
 
-(Not : KDV tutarını 18% olarak alın)
-
-KDV'siz Fiyat = 10;
-
-KDV'li Fiyat = 11.8;
-
-KDV tutarı = 1.8;
+:pushpin:KDV'siz Fiyat = 10;   
+:pushpin:KDV'li Fiyat = 11.8;   
+:pushpin:KDV tutarı = 1.8;   
 
 :interrobang: 
 Eğer girilen tutar 0 ve 1000 TL arasında ise KDV oranı %18 , tutar 1000 TL'den büyük ise KDV oranını %8 olarak KDV tutarı hesaplayan programı yazınız.
@@ -141,11 +137,9 @@ Java ile kullanıcıdan dik kenarlarının uzunluğunu alan ve hipotenüsü hesa
 Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
 
 
-:pushpin: Formül : Üçgenin çevresi = 2𝑢
-
-:pushpin: Formül : 𝑢 = (a+b+c) / 2
-
-:pushpin: Formül : Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
+:pushpin: Formül : Üçgenin çevresi = 2𝑢   
+:pushpin: Formül : 𝑢 = (a+b+c) / 2   
+:pushpin: Formül : Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)   
 
 
 ### :green_square: CEVAP
@@ -207,11 +201,9 @@ public class Hipotenus {
 ### SORU :question:
 Java ile gidilen mesafeye (KM) göre taksimetre tutarını ekrana yazdıran programı yazın.
 
--Taksimetre KM başına 2.20 TL tutmaktadır.
-
--Minimum ödenecek tutar 20 TL'dir. 20 TL altında ki ücretlerde yine 20 TL alınacaktır.
-
--Taksimetre açılış ücreti 10 TL'dir.
+:pushpin: Taksimetre KM başına 2.20 TL tutmaktadır.   
+:pushpin: Minimum ödenecek tutar 20 TL'dir. 20 TL altında ki ücretlerde yine 20 TL alınacaktır.   
+:pushpin: Taksimetre açılış ücreti 10 TL'dir.   
 
 ### :green_square: CEVAP
 
@@ -250,9 +242,8 @@ public class TaksiMetre {
 Dairenin Alanını ve Çevresini Hesaplayan Program
 Java ile yarı çapını kullanıcıdan aldığınız dairenin alanını ve çevresini hesaplayan programı yazın.
 
-:pushpin: Alan Formülü : π * r * r;
-
-:pushpin: Çevre Formülü : 2 * π * r;
+:pushpin: Alan Formülü : π * r * r;   
+:pushpin: Çevre Formülü : 2 * π * r;   
 
 :interrobang:
 Yarıçapı r, merkez açısısının ölçüsü 𝛼 olan daire diliminin alanı bulan programı yazınız.
@@ -306,7 +297,7 @@ public class DaireAlanCevre {
 ### SORU :question:
 Java koşullu ifadeler ile basit hesap makinesi yapımı.
 
-:pushpin: Hesap makinesini switch-case kullanarak yapınız
+:pushpin: Hesap makinesini switch-case kullanarak yapınız.
 
 ### :green_square: CEVAP
 
@@ -451,9 +442,8 @@ public class KullaniciGirisi {
 ### SORU :question:
 Java koşullu ifadeler ile kullanıcının not durumuna göre sınıfı geçme durumunu hesaplayan program yapımı.
 
-Dersler : Matematik, Fizik, Türkçe, Kimya, Müzik
-
-Geçme Notu : 55
+:pushpin: Dersler : Matematik, Fizik, Türkçe, Kimya, Müzik   
+:pushpin: Geçme Notu : 55   
 
 :interrobang: Eğer girilen ders notları 0 veya 100 arasında değil ise ortalamaya katılmasın.
 
@@ -533,6 +523,86 @@ public class SinifiGecmeDurumu {
 }
 ```
 </details>
+
+## :open_book: PRATİK 9	- Hava Sıcaklığına Göre Etkinlik Önerme
+
+### SORU :question:
+Java koşullu ifadeler ile hava sıcaklığına göre etkinlik öneren program yapımı.
+
+:pushpin: Koşullar :   
+- Sıcaklık 5'dan küçük ise "Kayak" yapmayı öner.   
+- Sıcaklık 5 ve 15 arasında ise "Sinema" etkinliğini öner.   
+- Sıcaklık 15 ve 25 arasında ise "Piknik" etkinliğini öner.   
+- Sıcaklık 25'ten büyük ise "Yüzme" etkinliğini öner.   
+
+:interrobang: Aynı örnek üzerinden if koşulları başka hangi şekilde oluşturulabilirdi farklı çözüm yolları bulunuz.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik9;
+
+import java.util.Scanner;
+
+public class HavaSicakligiEtkinlikOnerme {
+    public static void main(String[] args) {
+
+        // IF İLE ÇÖZÜM
+        System.out.println("\n!!! IF İLE ÇÖZÜM !!!\n");
+
+        // Değişkenlerin tanımlanması ve kullanıcıdan sıcaklık değerinin aldırılması.
+        int sicaklik;
+        Scanner input = new Scanner(System.in);
+        System.out.print("lütfen sıcaklık değerini giriniz : ");
+        sicaklik = input.nextInt();
+
+        // Koşulların sorgulanarak ekrana yazdırılması.
+        if (sicaklik < 5) {
+            System.out.println("Kayak yapabilirsiniz.");
+        } else if (sicaklik < 15) {
+            System.out.println("Sinemaya gidebilirsiniz.");
+        } else if (sicaklik == 15) {
+            System.out.println("Sinemaya gidebilirsiniz.");
+            System.out.println("Pikniğe gidebilirsiniz.");
+        } else if (sicaklik <= 25) {
+            System.out.println("Pikniğe gidebilirsiniz.");
+        } else {
+            System.out.println("Yüzmeye gidebilirsiniz.");
+        }
+
+        // BOOLEAN İLE ÇÖZÜM
+        System.out.println("\n!!! BOOLEAN İLE ÇÖZÜM !!!\n");
+
+        System.out.print("lütfen sıcaklık değerini giriniz : ");
+        sicaklik = input.nextInt();
+        String sonuc;
+
+        // Sıcaklık 25 derece ve üstü ise kosul5 olsaydı eğer her zaman doğru çıkacaktı.
+        // Bu nedenle aşağıdaki sorgulamanın son bölümünde kullanıldı.
+        boolean kosul1 = sicaklik < 5; // Kayak
+        boolean kosul2 = sicaklik >= 5 && sicaklik < 15; // Sinema
+        boolean kosul3 = sicaklik == 15; // Sineme ve Piknik
+        boolean kosul4 = (sicaklik > 15 && sicaklik <= 25); // Piknik        
+
+        // Koşulların sorgulanması.
+        sonuc = kosul1 ? "Kayak yapabilirsiniz." :
+                kosul2 ? "Sinemaya gidebilirsiniz." :
+                kosul3 ? "Sinemaya gidebilirsiniz. " + "\nPikniğe gidebilirsiniz." :
+                kosul4 ? "Pikniğe gidebilirsiniz." :
+                         "Yüzmeye gidebilirsiniz.";
+
+        // Sonucun yazdırılması.
+        System.out.println(sonuc);
+
+    }
+}
+
+
+```
+</details>  
   
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
@@ -587,13 +657,13 @@ public class VucutKitleIndeksi {
 Manav Kasa Programı
 Java ile kullanıcıların manavdan almış oldukları ürünlerin kilogram değerlerine göre toplam tutarını ekrana yazdıran programı yazın.
 
-:pushpin: Meyveler ve KG Fiyatları
+:pushpin: Meyveler ve KG Fiyatları:
 
--Armut : 2,14 TL   
--Elma : 3,67 TL  
--Domates : 1,11 TL  
--Muz: 0,95 TL  
--Patlıcan : 5,00 TL  
+- Armut : 2,14 TL   
+- Elma : 3,67 TL  
+- Domates : 1,11 TL  
+- Muz: 0,95 TL  
+- Patlıcan : 5,00 TL  
 
 
 :heavy_check_mark: Örnek Çıktı
