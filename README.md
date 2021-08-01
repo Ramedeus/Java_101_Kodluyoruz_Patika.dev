@@ -605,6 +605,92 @@ public class HavaSicakligiEtkinlikOnerme {
 
 ```
 </details>  
+
+## :open_book: PRATİK 10	- Sayıları Büyükten Küçüğe Sıralayan Program
+
+### SORU :question:
+Java koşullu ifadeler ile girilen 3 sayıyı büyükten küçüğe sıralayan program yapımı.
+
+:interrobang: Girilen 3 sayıyı "küçükten büyüğe" sıralayan programı yazınız.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik10;
+
+import java.util.Scanner;
+
+public class SayiBuyuktenKucuge {
+    public static void main(String[] args) {
+
+        //Sayılar için değişlenler oluşturuldu.
+        int s1, s2, s3;
+        Scanner input = new Scanner(System.in);
+
+        // Kullanıcıdan sayı değerleri istendi.
+        System.out.print("Lütfen 1. Sayıyı giriniz : ");
+        s1 = input.nextInt();
+
+        System.out.print("Lütfen 2. Sayıyı giriniz : ");
+        s2 = input.nextInt();
+
+        System.out.print("Lütfen 3. Sayıyı giriniz : ");
+        s3 = input.nextInt();
+
+        // BÜYÜKTEN KÜÇÜĞE SIRALAMA
+        System.out.println("!!! BÜYÜKTEN KÜÇÜĞE SIRALAMA !!!");
+
+        // Alınan değerler kıyaslanarak yazdırıldı.
+        if (s1 > s2 && s1 > s3) {
+            if (s2 > s3) {
+                System.out.println("s1>s2>s3");
+            } else {
+                System.out.println("s1>s3>s2");
+            }
+        } else if (s2 > s1 && s2 > s3) {
+            if (s1 > s3) {
+                System.out.println("s2>s1>s3");
+            } else {
+                System.out.println("s2>s3>s1");
+            }
+        } else {
+            if (s1 > s2) {
+                System.out.println("s3>s1>s2");
+            } else {
+                System.out.println("s3>s2>s1");
+            }
+        }
+
+        // KÜÇÜKTEN BÜYÜĞE SIRALAMA
+        System.out.println("\n!!! KÜÇÜKTEN BÜYÜĞE SIRALAMA !!!");
+
+        if (s1 < s2 && s1 < s3) {
+            if (s2 < s3) {
+                System.out.println("s1<s2<s3");
+            } else {
+                System.out.println("s1<s3<s2");
+            }
+        } else if (s2 < s1 && s2 < s3) {
+            if (s1 < s3) {
+                System.out.println("s2<s1<s3");
+            } else {
+                System.out.println("s2<s3<s1");
+            }
+        } else {
+            if (s1 < s2) {
+                System.out.println("s3<s1<s2");
+            } else {
+                System.out.println("s3<s2<s1");
+            }
+        }
+    }
+}
+
+```
+</details>  
   
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
