@@ -1038,10 +1038,135 @@ public class ManavKasa {
         System.out.print("Toplam Tutar :" + toplamTutar + " TL");
     }
 }
+```
+</details>   
+  
+  
+## :open_book: ÖDEV 3	- Uçak Bileti Fiyatı Hesaplayan Program
 
+### SORU :question:
+Java ile mesafeye ve şartlara göre uçak bileti fiyatı hesaplayan programı yapın. Kullanıcıdan Mesafe (KM), yaşı ve yolculuk tipi (Tek Yön, Gidiş-Dönüş) bilgilerini alın. Mesafe başına ücret 0,10 TL / km olarak alın. İlk olarak uçuşun toplam fiyatını hesaplayın ve sonrasında ki koşullara göre müşteriye aşağıdaki indirimleri uygulayın ;
+
+:pushpin: Kullanıcıdan alınan değerler geçerli (mesafe ve yaş değerleri pozitif sayı, yolculuk tipi ise 1 veya 2) olmalıdır. Aksi takdirde kullanıcıya "Hatalı Veri Girdiniz !" şeklinde bir uyarı verilmelidir.
+
+:pushpin: Kişi 12 yaşından küçükse bilet fiyatı üzerinden %50 indirim uygulanır.
+
+:pushpin: Kişi 12-24 yaşları arasında ise bilet fiyatı üzerinden %10 indirim uygulanır.
+
+:pushpin: Kişi 65 yaşından büyük ise bilet fiyatı üzerinden %30 indirim uygulanır.
+
+:pushpin: Kişi "Yolculuk Tipini" gidiş dönüş seçmiş ise bilet fiyatı üzerinden %20 indirim uygulanır.  
+  
+
+:mag: İpucu
+```
+Normal Tutar = Mesafe * 0.10 = 1500 * 0.10 = 150 TL
+Yaş İndirimi = Normal Tutar * Yaş İndirim Oranı = 150 * 0.10= 15 TL
+İndirimli Tutar = Normal Tutar – Yaş İndirimi = 150 – 15 = 135 TL
+Gidiş Dönüş Bilet İndirimi = İndirimli Tutar * 0.20 = 135 * 0.20 = 27 TL
+Toplam Tutar = (135-27)* 2 = 216 TL
+```
+  
+:heavy_check_mark: Senaryo 1
+```
+Mesafeyi km türünden giriniz : 1500
+Yaşınızı giriniz : 20
+Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ): 2
+
+Toplam Tutar = 216 TL
+```  
+  
+:heavy_check_mark: Senaryo 2
+```
+Mesafeyi km türünden giriniz : -500
+Yaşınızı giriniz : 1
+Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ): 77
+
+Hatalı Veri Girdiniz !
+```    
+
+:heavy_check_mark: Senaryo 3
+```
+Mesafeyi km türünden giriniz : 200
+Yaşınızı giriniz : 35
+Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ): 1
+
+Toplam Tutar = 20.0 TL
+```  
+ 
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev3;
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class UcakBiletiFiyati {
+    public static void main(String[] args) {
+
+        // Deişkenler tanımlandı.
+        double mesafe, yas, mUcret=0.10, nTutar, yIndirimi=0, iTutar, gdbIndirimi, tTutar;
+        int yolTip;
+
+        // Kullanıcıdan değerlerin aldırılması icin scanner kullanıldı.
+        // Virgüllerden sonra çıkan 0'ların silinmesi için DecimalFormat eklendi.
+        Scanner input = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        // Kullanıcıdan KM, yaş ve gidiş döneş bilgisi istendi.
+        System.out.print("Mesafeyi km türünden giriniz : ");
+        mesafe = input.nextInt();
+
+        System.out.print("Yaşınızı giriniz : ");
+        yas = input.nextInt();
+
+        System.out.print("Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ): ");
+        yolTip = input.nextInt();
+
+        // Ücret hesaplaması...
+        nTutar=mesafe*mUcret;
+
+        // İndirimlerin hesaplanması ve toplam tutara uygulanması...
+        if (yas < 12) {
+            yIndirimi=nTutar*0.50;
+        } else if (yas >=12 && yas <= 24){
+            yIndirimi=nTutar*0.10;
+        } else if (yas >= 65){
+            yIndirimi=nTutar*0.30;
+        }
+
+        iTutar=nTutar-yIndirimi;
+
+        switch (yolTip) {
+            case 1:
+                gdbIndirimi=iTutar*0;
+                tTutar=iTutar-gdbIndirimi;
+                System.out.print("\nToplam Tutar = " + df.format(tTutar) +" TL");
+                break;
+
+            case 2:
+                gdbIndirimi=iTutar*0.20;
+                tTutar=iTutar-gdbIndirimi;
+                tTutar=tTutar*2;
+                System.out.print("\nToplam Tutar = " + df.format(tTutar) +" TL");
+                break;
+
+            default:
+                System.out.println("\nHatalı Veri Girdiniz !");
+                break;
+        }
+    }
+}
 
 ```
-</details> 
+</details>   
+
+
+
  
 ---
 
