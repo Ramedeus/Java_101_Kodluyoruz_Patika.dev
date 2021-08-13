@@ -16,6 +16,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-10--say%C4%B1lar%C4%B1-b%C3%BCy%C3%BCkten-k%C3%BC%C3%A7%C3%BC%C4%9Fe-s%C4%B1ralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program|
 | [PRATİK 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Burç Bulan Program|
 | [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program|
+| [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program|
 
 
 ---
@@ -983,6 +984,58 @@ public class CiftSayiBulanProgram {
         }
         ortalama = toplam / bolen;
         System.out.println("Ortalama: " + ortalama);
+    }
+}
+
+```
+</details>
+          
+## :open_book: PRATİK 13	- Tek Sayıların Toplamını Bulan Program
+
+### SORU :question:
+Java döngüler ile negatif bir değer girilene kadar kullanıcıdan girişleri kabul eden ve girilen değerlerden tek sayıları toplayıp ekrana basan programı yazıyoruz.
+          
+:interrobang: Java döngüler ile tek bir sayı girilene kadar kullanıcıdan girişleri kabul eden ve girilen değerlerden çift ve 4'ün katları olan sayıları toplayıp ekrana basan programı yazıyoruz.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik13;
+import java.util.Scanner;
+
+public class TekSayilarinToplaminiBulanProgram {
+    public static void main(String[] args) {
+        int sayi=0, toplam1=0, toplam2=0;
+        Scanner input = new Scanner(System.in);
+
+        // TEK SAYILARIN TOPLAMINI BULAN PROGRAM
+        System.out.println("!!! TEK SAYILARIN TOPLAMINI BULAN PROGRAM !!!\n");
+
+        System.out.print("lütfen bir sayı giriniz: ");
+
+        while (sayi>=0) {
+            sayi = input.nextInt();
+            if(sayi%2==1){
+                toplam1 += sayi;
+            }
+        }
+        System.out.println("Toplam = "+toplam1);
+
+        // ÇİFT VE 4'ÜN KATLARI OLAN SAYILARIN TOPLAMINI BULAN PROGRAM
+        System.out.println("\n!!! ÇİFT VE 4'ÜN KATLARI OLAN SAYILARIN TOPLAMINI BULAN PROGRAM !!!\n");
+
+        System.out.print("lütfen bir sayı giriniz: ");
+
+        while (sayi%2!=1) {
+            sayi = input.nextInt();
+            if(sayi%2==0 & sayi%4==0){
+                toplam2 += sayi;
+            }
+        }
+        System.out.println("Toplam = "+toplam2);
     }
 }
 
