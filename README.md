@@ -16,7 +16,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-10--say%C4%B1lar%C4%B1-b%C3%BCy%C3%BCkten-k%C3%BC%C3%A7%C3%BC%C4%9Fe-s%C4%B1ralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program|
 | [PRATİK 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Burç Bulan Program|
 | [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program|
-| [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program|
+| [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-13--tek-say%C4%B1lar%C4%B1n-toplam%C4%B1n%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program|
 
 
 ---
