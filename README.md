@@ -15,6 +15,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-9--hava-s%C4%B1cakl%C4%B1%C4%9F%C4%B1na-g%C3%B6re-etkinlik-%C3%B6nerme) - Hava Sıcaklığına Göre Etkinlik Önerme|
 | [PRATİK 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-10--say%C4%B1lar%C4%B1-b%C3%BCy%C3%BCkten-k%C3%BC%C3%A7%C3%BC%C4%9Fe-s%C4%B1ralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program|
 | [PRATİK 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Burç Bulan Program|
+| [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program|
 
 
 ---
@@ -929,7 +930,65 @@ public class BurcBulanProgram {
     }
 }
 ```
-</details>  
+</details> 
+  
+## :open_book: PRATİK 12	- Girilen Sayılardan Çift Sayıları Bulan Program
+
+### SORU :question:
+Java döngüler ile kullanıcının girdiği sayıya kadar çift olan sayıları bulan programı yazıyoruz.
+
+:interrobang: Java döngüler ile 0'dan girilen sayıya kadar olan sayılardan 3 ve 4'e tam bölünen sayıların ortalamasını hesaplayan programı yazınız.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik12;
+import java.util.Scanner;
+
+public class CiftSayiBulanProgram {
+    public static void main(String[] args) {
+
+        // ÇİFT SAYILARI BULAN PROGRAM
+
+        System.out.println("!!! ÇİFT SAYILARI BULAN PROGRAM !!!\n");
+
+        int sayi, toplam = 0, bolen = 0, ortalama;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Lütfen bir sayı giriniz: ");
+        sayi = input.nextInt();
+
+        for (int x = 0; x <= sayi; x++) {
+            if (x % 2 == 0) {
+                System.out.println(x);
+            }
+        }
+
+        // 3 VE 4'E TAM BÖLÜNEN SAYILARIN ORTALAMASINI BULAN PROGRAM
+
+        System.out.println("\n!!! 3 VE 4'E TAM BÖLÜNEN SAYILARIN ORTALAMASINI BULAN PROGRAM !!!\n");
+
+        System.out.print("Lütfen bir sayı giriniz: ");
+        sayi = input.nextInt();
+
+        for (int y = 0; y <= sayi; y++) {
+            if (y % 3 == 0 & y % 4 == 0) {
+                System.out.println(y);
+                bolen++;
+                toplam += y;
+            }
+        }
+        ortalama = toplam / bolen;
+        System.out.println("Ortalama: " + ortalama);
+    }
+}
+
+```
+</details>
+  
   
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
