@@ -1496,6 +1496,4 @@ Hatalar, öneriler ve değişiklikler için lütfen bir konu açınız.
 
 [MIT](https://www.google.com/search?q=mit+license&oq=mit+license&aqs=chrome.0.0l4j0i22i30l6.2910j0j7&sourceid=chrome&ie=UTF-8)
 
-
-![Lorem Picsum](https://picsum.photos/200/300)
-
+<img src="https://github.com/Ramedeus/Logo/blob/main/Ramedeus2.png " width="300" height="300"/>
