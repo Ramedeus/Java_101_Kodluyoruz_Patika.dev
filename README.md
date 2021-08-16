@@ -17,6 +17,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Burç Bulan Program|
 | [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program|
 | [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-13--tek-say%C4%B1lar%C4%B1n-toplam%C4%B1n%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program|
+| [PRATİK 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-13--tek-say%C4%B1lar%C4%B1n-toplam%C4%B1n%C4%B1-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program|
 
 
 ---
@@ -1042,7 +1043,64 @@ public class TekSayilarinToplaminiBulanProgram {
 ```
 </details>
   
+## :open_book: PRATİK 14	- Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program
+
+### SORU :question:
+Java döngüler ile girilen sayıya kadar olan 2'nin kuvvetlerini ekrana yazdıran programı yazıyoruz.
+         
+:interrobang: Java döngüler ile girilen sayıya kadar olan 4 ve 5'in kuvvetlerini ekrana yazdıran programı yazıyoruz.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
   
+```java
+package Pratik14;
+
+import java.util.Scanner;
+
+public class IkininKuvvetiniBulanProgram {
+    public static void main(String[] args) {
+        int sayi1, sayac1 = 0, sayi2, sayac2 = 0, sayac3 = 0;
+        Scanner input = new Scanner(System.in);
+
+        // 2'NİN KUVVETLERİNİ EKRANA YAZDIRAN PROGRAM
+        System.out.print("\n!!! 2'NİN KUVVETLERİNİ EKRANA YAZDIRAN PROGRAM !!!\n");
+
+        System.out.print("Lütfen bir sınır değeri giriniz: ");
+        sayi1 = input.nextInt();
+
+        for (int x = 1; x <= sayi1; x *= 2) {
+            System.out.println(2 + "^" + sayac1 + " = " + x);
+            sayac1++;
+        }
+
+        // 4 VE 5'İN KUVVETLERİNİ EKRANA YAZDIRAN PROGRAM
+        System.out.print("\n!!! 4 VE 5'İN KUVVETLERİNİ EKRANA YAZDIRAN PROGRAM !!!\n");
+
+        System.out.print("Lütfen bir sınır değeri giriniz: ");
+        sayi2 = input.nextInt();
+
+        System.out.println("4'ün katları\n");
+
+        for (int y = 1; y <= sayi2; y *= 4) {
+            System.out.println(4 + "^" + sayac2 + " = " + y);
+            sayac2++;
+        }
+
+        System.out.println("5'in katları\n");
+
+        for (int z = 1; z <= sayi2; z *= 5) {
+            System.out.println(5 + "^" + sayac3 + " = " + z);
+            sayac3++;
+        }
+    }
+}
+
+```
+</details>
+          
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
 ### SORU :question:
