@@ -18,6 +18,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program|
 | [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-13--tek-say%C4%B1lar%C4%B1n-toplam%C4%B1n%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program|
 | [PRATİK 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-14--girilen-say%C4%B1dan-k%C3%BC%C3%A7%C3%BCk-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program|
+| [PRATİK 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-14--girilen-say%C4%B1dan-k%C3%BC%C3%A7%C3%BCk-2nin-kuvvetlerini-bulan-program) - Faktöriyel Hesaplayan Program|
 
 
 ---
@@ -1100,6 +1101,77 @@ public class IkininKuvvetiniBulanProgram {
 
 ```
 </details>
+          
+## :open_book: PRATİK 15	- Faktöriyel Hesaplayan Program
+
+### SORU :question:
+Java ile faktöriyel hesaplayan program yazıyoruz.
+         
+:interrobang: N elemanlı bir kümenin elemanları ile oluşturulacak r elemanlı farklı grupların sayısı n’in r’li kombinasyonu olarak adlandırılır. N’in r’li kombinasyonu C(n,r) şeklinde gösterilir.
+Java ile kombinasyon hesaplayan program yazınız. 
+          
+:pushpin: Kombinasyon formülü
+- C(n,r) = n! / (r! * (n-r)!)
+          
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik15;
+
+import java.util.Scanner;
+
+public class FaktoriyelHesaplayanProgram {
+    public static void main(String[] args) {
+        int sayi, sonuc = 1, n, r, nF = 1, rF = 1, nRF = 1, kS;
+        Scanner input = new Scanner(System.in);
+        // n = eleman sayısı
+        // r = seçim sayısı
+        // nF = n Faktöriyel
+        // rF = r Faktöriyel
+        // nRF = n-r Faktöriyel
+        // kS = kombinasyon sayısı
+
+        //Faktöriyel Hesaplayan Program
+        System.out.print("\n!!! FAKTÖRİYEL HESAPLAYAN PROGRAM\n");
+
+        System.out.print("Faktörüyel hesaplamak için bir sayı giriniz: ");
+        sayi = input.nextInt();
+
+        for (int x = 1; x <= sayi; x++) {
+            sonuc = sonuc * x;
+        }
+        System.out.print(sayi + " Faktöriyel= " + sonuc);
+
+        //Kombinasyon Hesaplayan Program
+        System.out.print("\n!!! KOMBİNASYON HESAPLAYAN PROGRAM\n");
+
+        System.out.print("Eleman Sayısı (n): ");
+        n = input.nextInt();
+
+        System.out.print("Seçim Sayısı (r): ");
+        r = input.nextInt();
+
+        for (int y = 1; y <= n; y++) {
+            nF = nF * y;
+        }
+
+        for (int z = 1; z <= r; z++) {
+            rF = rF * z;
+        }
+
+        for (int a = 1; a <= n - r; a++) {
+            nRF = nRF * a;
+        }
+
+        kS = nF / (rF * (nRF));
+        System.out.println("C(" + n + "," + r + "): " + kS);
+    }
+}
+```
+</details>          
           
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
