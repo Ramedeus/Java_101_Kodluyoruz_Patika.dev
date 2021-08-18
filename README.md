@@ -20,6 +20,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-14--girilen-say%C4%B1dan-k%C3%BC%C3%A7%C3%BCk-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program|
 | [PRATİK 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-15--fakt%C3%B6riyel-hesaplayan-program) - Faktöriyel Hesaplayan Program|
 | [PRATİK 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-16--%C3%BCsl%C3%BC-say%C4%B1-hesaplayan-program) - Üslü Sayı Hesaplayan Program|
+| [PRATİK 17](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-16--%C3%BCsl%C3%BC-say%C4%B1-hesaplayan-program) - Armstrong Sayıları Bulan Program|
 
 
 ---
@@ -1228,7 +1229,111 @@ public class UsluSayiHesaplayanProgram {
 }
 ```
 </details>          
+
+## :open_book: PRATİK 17	- Armstrong Sayıları Bulan Program
+
+### SORU :question:
+Java döngüler ile sayının armstrong sayı olup olmadığını bulan programı yazıyoruz.
+
+:pushpin: Armstrong Sayı Nedir ?
+
+N haneli bir sayının basamaklarının n’inci üstlerinin toplamı, sayının kendisine eşitse, böyle sayılara Armstrong sayı denir.
+
+Örneğin 407 sayısını ele alalım. (4^3)+ (0^3)+(7^3) = 64+0+343 = 407 sonucunu verir. Bu da 407 sayısının armstrong bir sayı olduğunu gösterir.
+
+1342 sayısına da bakalım. (1^4)+(3^4)+(4^4)+(2^4) =1+81+256+16=354 sayısı 1342’ye eşit olmadığı için armstrong sayı olmaz.
+
+1634=1^4+6^4+3^4+4^4=1+1296+81+256=1634
+
+54748=5^5+4^5+7^5+4^5+8^5=3125+1024+16807+1024+32768=54748            
           
+:interrobang: Bir sayının basamak sayılarının toplamını hesaplayan program yazınız.        
+          
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik17;
+
+import java.util.Scanner;
+
+public class ArmstrongSayilariBulanProgram {
+    public static void main(String[] args) {
+        int sayi1, bsmkSay1 = 0, hafizaSay1;
+        Scanner input = new Scanner(System.in);
+
+        //Armstrong Sayıları Bulan Program
+        System.out.print("\n!!! ARMSTRONG SAYILARI BULAN PROGRAM !!!\n");
+
+        System.out.print("Lütfen bir sayı giriniz: ");
+        sayi1 = input.nextInt();
+        hafizaSay1 = sayi1;
+
+        for (int x = 0; sayi1 != 0; x++) {
+            sayi1 = sayi1 / 10;
+            bsmkSay1++;
+        }
+
+        sayi1 = hafizaSay1;
+
+        int bsmkMod1, bsmkDeger1, mod1 = 10, bolum1 = 1, gToplam1 = 1, sonuc1 = 0;
+
+        for (int y = 1; y <= bsmkSay1; y++) {
+            bsmkMod1 = sayi1 % mod1;
+            bsmkDeger1 = bsmkMod1 / bolum1;
+            mod1 *= 10;
+            bolum1 *= 10;
+
+            for (int z = 1; z <= bsmkSay1; z++) {
+                gToplam1 *= bsmkDeger1;
+            }
+
+            sonuc1 += gToplam1;
+            gToplam1 = 1;
+        }
+        if (sayi1 == sonuc1) {
+            System.out.println(sayi1 + " bir armstrong sayıdır.");
+        } else {
+            System.out.println(sayi1 + " bir armstrong sayıdır değildir !!!");
+        }
+
+
+        //Basamak Sayılarının Toplamını Hesaplayan Program
+        System.out.print("\n!!! BASAMAK SAYILARININ TOPLAMINI HESAPLAYAN PROGRAM !!!\n");
+
+        int sayi2, bsmkSay2 = 0, hafizaSay2;
+
+        System.out.print("Lütfen bir sayı giriniz: ");
+        sayi2 = input.nextInt();
+        hafizaSay2 = sayi2;
+
+        for (int x = 0; sayi2 != 0; x++) {
+            sayi2 = sayi2 / 10;
+            bsmkSay2++;
+        }
+
+        sayi2 = hafizaSay2;
+
+        int bsmkMod2, bsmkDeger2, mod2 = 10, bolum2 = 1, sonuc2 = 0;
+
+        for (int y = 1; y <= bsmkSay2; y++) {
+            bsmkMod2 = sayi2 % mod2;
+            bsmkDeger2 = bsmkMod2 / bolum2;
+            mod2 *= 10;
+            bolum2 *= 10;
+
+            sonuc2 += bsmkDeger2;
+
+        }
+
+        System.out.print("Basamak Sayılarının Toplamı: " + sonuc2);
+
+    }
+}
+```
+</details>           
           
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
