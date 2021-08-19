@@ -21,7 +21,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-15--fakt%C3%B6riyel-hesaplayan-program) - Faktöriyel Hesaplayan Program|
 | [PRATİK 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-16--%C3%BCsl%C3%BC-say%C4%B1-hesaplayan-program) - Üslü Sayı Hesaplayan Program|
 | [PRATİK 17](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-17---armstrong-say%C4%B1lar%C4%B1-bulan-program) - Armstrong Sayıları Bulan Program|
-| [PRATİK 18](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-17---armstrong-say%C4%B1lar%C4%B1-bulan-program) - Harmonik Sayıları Bulan Program|
+| [PRATİK 18](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-18--harmonik-say%C4%B1lar%C4%B1-bulan-program) - Harmonik Sayıları Bulan Program|
 
 
 ---
@@ -1420,7 +1420,7 @@ Java ile girilen sayının harmonik serisini bulan program yazacağız.
           
 :pushpin: Harmonik Seri Formülü:
 
-<img src="https://github.com/Ramedeus/Logo/blob/main/Ramedeus2.png " width="300" height="300"/>
+<img src="https://raw.githubusercontent.com/Ramedeus/Logo/main/harmonic_series.gif?token=AURD3IBEHRVDTCB2IAPJFJTBDZ3NS " width="300" height="300"/>
           
 ### :green_square: CEVAP
 
