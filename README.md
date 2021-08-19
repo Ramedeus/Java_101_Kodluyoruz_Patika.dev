@@ -1420,7 +1420,7 @@ Java ile girilen sayının harmonik serisini bulan program yazacağız.
           
 :pushpin: Harmonik Seri Formülü:
 
-<img src="https://raw.githubusercontent.com/Ramedeus/Logo/main/harmonic_series.gif?token=AURD3IBEHRVDTCB2IAPJFJTBDZ3NS " width="300" height="300"/>
+<img src="https://github.com/Ramedeus/Logo/blob/main/harmonic_series.gif "/>
           
 ### :green_square: CEVAP
 
