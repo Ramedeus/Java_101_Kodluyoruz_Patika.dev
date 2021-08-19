@@ -21,6 +21,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-15--fakt%C3%B6riyel-hesaplayan-program) - Faktöriyel Hesaplayan Program|
 | [PRATİK 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-16--%C3%BCsl%C3%BC-say%C4%B1-hesaplayan-program) - Üslü Sayı Hesaplayan Program|
 | [PRATİK 17](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-17---armstrong-say%C4%B1lar%C4%B1-bulan-program) - Armstrong Sayıları Bulan Program|
+| [PRATİK 18](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-17---armstrong-say%C4%B1lar%C4%B1-bulan-program) - Harmonik Sayıları Bulan Program|
 
 
 ---
@@ -1410,6 +1411,43 @@ public class ArmstrongSayilariBulanProgram {
 }
 ```
 </details>           
+
+          
+## :open_book: PRATİK 18	- Harmonik Sayıları Bulan Program
+
+### SORU :question:
+Java ile girilen sayının harmonik serisini bulan program yazacağız.
+          
+:pushpin: Harmonik Seri Formülü:
+
+<img src="https://github.com/Ramedeus/Logo/blob/main/Ramedeus2.png " width="300" height="300"/>
+          
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik18;
+
+import java.util.Scanner;
+
+public class HarmonikSeriBulanProgram {
+    public static void main(String[] args) {
+        double n, toplam = 0;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Harmonik serisini bulmak istediğiniz sayıyı (n) giriniz: ");
+        n = input.nextInt();
+
+        for (double x = 1; x <= n; x++) {
+            toplam += 1 / x;
+        }
+        System.out.print("Cevap: " + toplam);
+    }
+}
+```
+</details>                  
           
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
