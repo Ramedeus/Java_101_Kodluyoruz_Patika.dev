@@ -2,6 +2,8 @@
 
 Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış olduğum repo. İçerisinde Java pratik ve ödevlerinin soru ve cevaplarını içeren bir adet README dosyası barındırıyor.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 | PRATİKLER | ÖDEVLER |
 |-----|-----|
 | [PRATİK 1](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-1--not-ortalamas%C4%B1) - Not Ortalaması | [ÖDEV 1](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-1--v%C3%BCcut-kitle-i%CC%87ndeksi-hesaplama) - Vücut Kitle İndeksi Hesaplama|
@@ -22,10 +24,10 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-16--%C3%BCsl%C3%BC-say%C4%B1-hesaplayan-program) - Üslü Sayı Hesaplayan Program|
 | [PRATİK 17](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-17---armstrong-say%C4%B1lar%C4%B1-bulan-program) - Armstrong Sayıları Bulan Program|
 | [PRATİK 18](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-18--harmonik-say%C4%B1lar%C4%B1-bulan-program) - Harmonik Sayıları Bulan Program|
-| [PRATİK 19](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-18--harmonik-say%C4%B1lar%C4%B1-bulan-program) - Yıldız ile Üçgen Yapımı|
+| [PRATİK 19](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-19---y%C4%B1ld%C4%B1z-ile-%C3%BC%C3%A7gen-yap%C4%B1m%C4%B1) - Yıldız ile Üçgen Yapımı|
 
 
----
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## :open_book: PRATİK 1	- Not Ortalaması
 
@@ -85,6 +87,8 @@ public class NotOrtalamasi {
 ```
 </details>
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## :open_book: PRATİK 2	- KDV Hesaplama
 
 ### SORU :question:
@@ -139,6 +143,8 @@ public class KDVHesaplama {
 ```
 </details>
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  
 ## :open_book: PRATİK 3	- Hipotenüs Bulma
 
 ### SORU :question:
@@ -208,6 +214,8 @@ public class Hipotenus {
 ```
 </details> 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  
 ## :open_book: PRATİK 4	- Taksimetre
 
 ### SORU :question:
@@ -248,6 +256,8 @@ public class TaksiMetre {
 ```
 </details>
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  
 ## :open_book: PRATİK 5	- Daire & Alan & Çevre
 
 ### SORU :question:
@@ -304,6 +314,8 @@ public class DaireAlanCevre {
 ```
 </details> 
  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  
 ## :open_book: PRATİK 6	- Hesap Makinesi
 
 ### SORU :question:
@@ -378,7 +390,9 @@ public class HesapMakinesi {
 
 ```
 </details> 
-
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
 ## :open_book: PRATİK 7	- Kullanıcı Girişi
 
 ### SORU :question:
@@ -449,6 +463,8 @@ public class KullaniciGirisi {
 ```
 </details> 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
 ## :open_book: PRATİK 8	- Sınıfı Geçme Durumu
 
 ### SORU :question:
@@ -536,6 +552,8 @@ public class SinifiGecmeDurumu {
 ```
 </details>
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  
 ## :open_book: PRATİK 9	- Hava Sıcaklığına Göre Etkinlik Önerme
 
 ### SORU :question:
@@ -616,6 +634,8 @@ public class HavaSicakligiEtkinlikOnerme {
 ```
 </details>  
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  
 ## :open_book: PRATİK 10	- Sayıları Büyükten Küçüğe Sıralayan Program
 
 ### SORU :question:
@@ -701,6 +721,8 @@ public class SayiBuyuktenKucuge {
 
 ```
 </details>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
   
 ## :open_book: PRATİK 11	- Burç Bulan Program
 
@@ -939,6 +961,8 @@ public class BurcBulanProgram {
 ```
 </details> 
   
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  
 ## :open_book: PRATİK 12	- Girilen Sayılardan Çift Sayıları Bulan Program
 
 ### SORU :question:
@@ -996,6 +1020,8 @@ public class CiftSayiBulanProgram {
 ```
 </details>
           
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+          
 ## :open_book: PRATİK 13	- Tek Sayıların Toplamını Bulan Program
 
 ### SORU :question:
@@ -1047,6 +1073,8 @@ public class TekSayilarinToplaminiBulanProgram {
 
 ```
 </details>
+          
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
   
 ## :open_book: PRATİK 14	- Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program
 
@@ -1105,6 +1133,8 @@ public class IkininKuvvetiniBulanProgram {
 
 ```
 </details>
+          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
           
 ## :open_book: PRATİK 15	- Faktöriyel Hesaplayan Program
 
@@ -1175,7 +1205,9 @@ public class FaktoriyelHesaplayanProgram {
     }
 }
 ```
-</details>          
+</details>      
+          
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
           
 ## :open_book: PRATİK 16	- Üslü Sayı Hesaplayan Program
 
@@ -1230,14 +1262,16 @@ public class UsluSayiHesaplayanProgram {
     }
 }
 ```
-</details>          
+</details>    
+          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## :open_book: PRATİK 17 - Armstrong Sayıları Bulan Program
 
 ### SORU :question:
 Java döngüler ile sayının armstrong sayı olup olmadığını bulan programı yazıyoruz.
 
-:pushpin: Armstrong Sayı Nedir ?
+:mag: Armstrong Sayı Nedir ?
 
 N haneli bir sayının basamaklarının n’inci üstlerinin toplamı, sayının kendisine eşitse, böyle sayılara Armstrong sayı denir.
 
@@ -1411,7 +1445,9 @@ public class ArmstrongSayilariBulanProgram {
     }
 }
 ```
-</details>           
+</details>        
+          
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
           
 ## :open_book: PRATİK 18	- Harmonik Sayıları Bulan Program
@@ -1449,7 +1485,8 @@ public class HarmonikSeriBulanProgram {
 }
 ```
 </details>    
-          
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
           
 ## :open_book: PRATİK 19 - Yıldız ile Üçgen Yapımı
 
@@ -1557,6 +1594,7 @@ public class YildizlarIleUcgenYapimi {
 ```
 </details>          
           
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
           
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
@@ -1604,6 +1642,8 @@ public class VucutKitleIndeksi {
 
 ```
 </details> 
+          
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
 ## :open_book: ÖDEV 2	- Manav Kasa
 
@@ -1668,7 +1708,8 @@ public class ManavKasa {
 }
 ```
 </details>   
-  
+          
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
   
 ## :open_book: ÖDEV 3	- Uçak Bileti Fiyatı Hesaplama
 
@@ -1792,6 +1833,8 @@ public class UcakBiletiFiyati {
 
 ```
 </details>   
+  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
 ## :open_book: ÖDEV 4	- Çin Zodyağı Hesaplama
 
@@ -1873,6 +1916,8 @@ public class CinZodyagi {
 }
 ```
 </details>
+  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
 ## :open_book: ÖDEV 5	- Artık Yıl Hesaplama
 
@@ -1944,13 +1989,18 @@ public class ArtikYil {
 
 ```
 </details> 
----
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Contributing :hammer_and_wrench:	
 Hatalar, öneriler ve değişiklikler için lütfen bir konu açınız.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
 ## License :notebook_with_decorative_cover:
 
 [MIT](https://www.google.com/search?q=mit+license&oq=mit+license&aqs=chrome.0.0l4j0i22i30l6.2910j0j7&sourceid=chrome&ie=UTF-8)
+  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
 <img src="https://github.com/Ramedeus/Logo/blob/main/Ramedeus2.png " width="300" height="300"/>
