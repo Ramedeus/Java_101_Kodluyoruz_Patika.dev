@@ -22,6 +22,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-16--%C3%BCsl%C3%BC-say%C4%B1-hesaplayan-program) - Üslü Sayı Hesaplayan Program|
 | [PRATİK 17](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-17---armstrong-say%C4%B1lar%C4%B1-bulan-program) - Armstrong Sayıları Bulan Program|
 | [PRATİK 18](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-18--harmonik-say%C4%B1lar%C4%B1-bulan-program) - Harmonik Sayıları Bulan Program|
+| [PRATİK 19](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-18--harmonik-say%C4%B1lar%C4%B1-bulan-program) - Yıldız ile Üçgen Yapımı|
 
 
 ---
@@ -1447,7 +1448,115 @@ public class HarmonikSeriBulanProgram {
     }
 }
 ```
-</details>                  
+</details>    
+          
+          
+## :open_book: PRATİK 19 - Yıldız ile Üçgen Yapımı
+
+### SORU :question:
+Java'da döngüler kullanılarak yıldızlar ile üçgen yapıyoruz.
+
+<details>
+<summary>Örnek kodu görmek için tıklayınız.</summary>
+  
+```java          
+     * 
+    *** 
+   ***** 
+  ******* 
+ ********* 
+***********
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner klavye = new Scanner(System.in);
+        System.out.println("Bir Sayı Giriniz :");
+        int n = klavye.nextInt();
+
+        for (int i = 0; i <= n ; i++) {
+            for (int j = 0; j < (n - i); j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i + 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+
+
+    }
+}
+```
+</details>   
+           
+:interrobang: Java'da döngüler kullanarak yıldızlar ile elmas yapınız.           
+          
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik19;
+
+import java.util.Scanner;
+
+public class YildizlarIleUcgenYapimi {
+    public static void main(String[] args) {
+        int katSay1, katSay2;
+        Scanner input = new Scanner(System.in);
+
+        //Yıldız ile Üçgen Yapımı
+        System.out.print("\n!!! YILDIZ ÜÇGEN YAPIMI !!!\n");
+
+        System.out.print("Bir sayı giriniz: ");
+        katSay1 = input.nextInt();
+
+        for (int x = 0; x <= katSay1; x++) {
+
+            for (int y = 0; y < (katSay1 - x); y++) {
+                System.out.print(" ");
+            }
+            for (int z = 1; z <= (2 * x + 1); z++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+
+        //Yıldız Elmas Yapımı
+        System.out.print("\n!!! YILDIZ ELMAS YAPIMI !!!\n");
+
+        System.out.print("Bir sayı giriniz: ");
+        katSay2 = input.nextInt();
+
+        for (int x = 0; x <= katSay2; x++) {
+
+            for (int y = 0; y < (katSay2 - x); y++) {
+                System.out.print(" ");
+            }
+            for (int z = 1; z <= (2 * x + 1); z++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+        for (int x = 0; x <= katSay2; x++) {
+
+            for (int y = 0; y <= x; y++) {
+                System.out.print(" ");
+            }
+            for (int z = 1; z < (2 * katSay2) - (2 * x); z++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+}
+```
+</details>          
+          
           
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
