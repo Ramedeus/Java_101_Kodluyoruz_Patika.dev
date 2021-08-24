@@ -26,7 +26,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 18](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-18--harmonik-say%C4%B1lar%C4%B1-bulan-program) - Harmonik Sayıları Bulan Program|
 | [PRATİK 19](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-19---y%C4%B1ld%C4%B1z-ile-%C3%BC%C3%A7gen-yap%C4%B1m%C4%B1) - Yıldız ile Üçgen Yapımı|
 | [PRATİK 20](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-20---atm-projesi) - ATM Projesi|
-| [PRATİK 21](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-20---atm-projesi) - EBOB ve EKOK Bulan Program|
+| [PRATİK 21](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-21---ebob-ve-ekok-bulan-program) - EBOB ve EKOK Bulan Program|
 
 
 
