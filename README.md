@@ -26,6 +26,8 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 18](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-18--harmonik-say%C4%B1lar%C4%B1-bulan-program) - Harmonik Sayıları Bulan Program|
 | [PRATİK 19](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-19---y%C4%B1ld%C4%B1z-ile-%C3%BC%C3%A7gen-yap%C4%B1m%C4%B1) - Yıldız ile Üçgen Yapımı|
 | [PRATİK 20](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-20---atm-projesi) - ATM Projesi|
+| [PRATİK 21](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-20---atm-projesi) - EBOB ve EKOK Bulan Program|
+
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1825,6 +1827,117 @@ public class AtmProjesi {
 </details>          
           
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## :open_book: PRATİK 21 - EBOB ve EKOK Bulan Program
+
+### SORU :question:
+Java ile iki sayının EBOB ve EKOK değerlerini bulan program yazıyoruz.
+
+:mag: EBOB Nedir ?
+          
+- EBOB : İki ya da daha fazla doğal sayının ortak bölenlerinin en büyüğüne bu sayıların en büyük ortak böleni, kısaca EBOB‘u denir.
+
+- ÖRNEK: 18 ve 24 sayılarının en büyük ortak bölenini adım adım bulalım.
+
+- 18’in bölenleri : 1, 2, 3, 6, 9, 18
+
+- 24’ün bölenleri : 1, 2, 3, 4, 6, 8, 12, 24
+
+- Bu ortak bölenlerin en büyüğü 6 sayısı EBOB’tur.          
+
+:mag: EKOK Nedir ?
+
+- EKOK : İki ya da daha fazla doğal sayının ortak katlarının en küçüğüne bu sayıların en küçük ortak katı, kısaca EKOK‘u denir.
+
+- ÖRNEK: 6 ve 8 sayılarının en küçük ortak katını adım adım bulalım.
+
+- 6’nın katları : 6, 12, 18, 24, 30, 36, 42, 48, …
+
+- 8’in katları : 8, 16, 24, 32, 40, 48, 56, 64, …
+
+- Bu ortak katlardan en küçüğü 24 sayısı EKOK’tur.
+  
+:pushpin: Formül   
+EKOK = (n1*n2) / EBOB
+
+          
+          
+:interrobang: Java ile iki sayının EBOB ve EKOK değerlerini "While Döngüsü" kullanarak yazınız.       
+          
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik21;
+
+import java.util.Scanner;
+
+public class EbobVeEkokBulanProgram {
+    public static void main(String[] args) {
+        int sayi1, sayi2, sayi3, sayi4, ebob1 = 1, ebob2 = 1, ekok1 = 1, ekok2 = 1;
+        Scanner input = new Scanner(System.in);
+
+        // EBOB ve EKOK Bulan Program (FOR Döngüsü)
+        System.out.println("!!! EBOB VE EKOK BULAN PROGRAM (FOR DÖNGÜSÜ) !!!\n");
+
+        System.out.print("1. Sayıyı giriniz: ");
+        sayi1 = input.nextInt();
+
+        System.out.print("2. Sayıyı giriniz: ");
+        sayi2 = input.nextInt();
+
+        for (int x = 1; x <= sayi1; x++) {
+            if (sayi1 % x == 0 && sayi2 % x == 0) {
+                ebob1 = x;
+            }
+        }
+        System.out.println("EBOB: " + ebob1);
+
+        for (int y = 1; y <= sayi1 * sayi2; y++) {
+            if (y % sayi1 == 0 && y % sayi2 == 0) {
+                ekok1 = y;
+                break;
+            }
+        }
+        System.out.println("EKOK: " + ekok1);
+
+
+        // EBOB ve EKOK Bulan Program (WHILE Döngüsü)
+        System.out.println("\n!!! EBOB VE EKOK BULAN PROGRAM (WHILE DÖNGÜSÜ) !!!\n");
+
+        System.out.print("1. Sayıyı giriniz: ");
+        sayi3 = input.nextInt();
+
+        System.out.print("2. Sayıyı giriniz: ");
+        sayi4 = input.nextInt();
+        int y = 1;
+        while (y <= sayi3) {
+            if (sayi3 % y == 0 && sayi4 % y == 0) {
+                ebob2 = y;
+            }
+            y++;
+        }
+        System.out.println("EBOB: " + ebob2);
+
+        int a = 1;
+        while (a <= sayi3 * sayi4) {
+            if (a % sayi3 == 0 && a % sayi4 == 0) {
+                ekok2 = a;
+                break;
+            }
+            a++;
+        }
+        System.out.println("EKOK: " + ekok2);
+    }
+}
+
+```
+</details>        
+          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------          
+          
           
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
