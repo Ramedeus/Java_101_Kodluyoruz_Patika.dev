@@ -11,7 +11,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 3](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-3--hipoten%C3%BCs-bulma) - Hipotenüs Bulma| [ÖDEV 3](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-3--u%C3%A7ak-bileti-fiyat%C4%B1-hesaplama) - Uçak Bileti Fiyatı Hesaplama|
 | [PRATİK 4](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-4--taksimetre) - Taksimetre | [ÖDEV 4](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-4--%C3%A7in-zodya%C4%9F%C4%B1-hesaplama) - Çin Zodyağı Hesaplama|
 | [PRATİK 5](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-5--daire--alan--%C3%A7evre) - Daire & Alan & Çevre | [ÖDEV 5](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-5--art%C4%B1k-y%C4%B1l-hesaplama) - Artık Yıl Hesaplama|
-| [PRATİK 6](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-6--hesap-makinesi) - Hesap Makinesi|
+| [PRATİK 6](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-6--hesap-makinesi) - Hesap Makinesi| [ÖDEV 6](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-5--art%C4%B1k-y%C4%B1l-hesaplama) - Girilen Sayılardan Min ve Max Değerli Bulan Program|
 | [PRATİK 7](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-7--kullan%C4%B1c%C4%B1-giri%C5%9Fi) - Kullanıcı Girişi|
 | [PRATİK 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-8--s%C4%B1n%C4%B1f%C4%B1-ge%C3%A7me-durumu) - Sınıfı Geçme Durumu|
 | [PRATİK 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-9--hava-s%C4%B1cakl%C4%B1%C4%9F%C4%B1na-g%C3%B6re-etkinlik-%C3%B6nerme) - Hava Sıcaklığına Göre Etkinlik Önerme|
@@ -2335,6 +2335,70 @@ public class ArtikYil {
   
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## :open_book: ÖDEV 6	- Girilen Sayılardan Min ve Max Değerleri Bulma
+
+### SORU :question:
+Girilen Sayılardan Min ve Max Değerli Bulan Program
+  
+Java ile klavyeden girilen N tane sayma sayısından en büyük ve en küçük sayıları bulan ve bu sayıları ekrana yazan programı yazın.
+   
+:heavy_check_mark: Senaryo
+```
+Kaç tane sayı gireceksiniz: 4
+1. Sayıyı giriniz: 16
+2. Sayıyı giriniz: -22
+3. Sayıyı giriniz: -15
+4. Sayıyı giriniz: 100
+En büyük sayı: 100
+En küçük sayı: -22
+```   
+  
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev6;
+
+import java.util.Scanner;
+
+public class MinVeMaxDegerBulanProgram {
+    public static void main(String[] args) {
+        int sayiN, sayi, buyukSay = 0, kucukSay = 0;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Kaç tane sayı gireceksiniz: ");
+        sayiN = input.nextInt();
+
+        for (int x = 1; x <= sayiN; x++) {
+            System.out.print(x + ". Sayıyı giriniz: ");
+            sayi = input.nextInt();
+
+
+            if (sayi > buyukSay) {
+                if (kucukSay == 0) {
+                    kucukSay = sayi;
+                }
+                buyukSay = sayi;
+            }
+
+            if (sayi < kucukSay) {
+                if (buyukSay == 0) {
+                    buyukSay = sayi;
+                }
+                kucukSay = sayi;
+            }
+        }
+        System.out.println("En büyük sayı: " + buyukSay);
+        System.out.println("En küçük sayı: " + kucukSay);
+    }
+}
+```
+</details> 
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+  
 ## Contributing :hammer_and_wrench:	
 Hatalar, öneriler ve değişiklikler için lütfen bir konu açınız.
 
