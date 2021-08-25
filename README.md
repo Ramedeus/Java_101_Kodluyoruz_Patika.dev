@@ -15,7 +15,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 7](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-7--kullan%C4%B1c%C4%B1-giri%C5%9Fi) - Kullanıcı Girişi| [ÖDEV 7](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-7--m%C3%BCkemmel-say%C4%B1-bulan-program) - Mükemmel Sayı Bulan Program|
 | [PRATİK 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-8--s%C4%B1n%C4%B1f%C4%B1-ge%C3%A7me-durumu) - Sınıfı Geçme Durumu| [ÖDEV 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-8--ters-%C3%BC%C3%A7gen-yap%C4%B1m%C4%B1) - Ters Üçgen Yapımı|
 | [PRATİK 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-9--hava-s%C4%B1cakl%C4%B1%C4%9F%C4%B1na-g%C3%B6re-etkinlik-%C3%B6nerme) - Hava Sıcaklığına Göre Etkinlik Önerme| [ÖDEV 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-9--1-100-aras%C4%B1ndaki-asal-say%C4%B1lar%C4%B1-bulan-program) - 1-100 Arasındaki Asal Sayıları Bulan Program|
-| [PRATİK 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-10--say%C4%B1lar%C4%B1-b%C3%BCy%C3%BCkten-k%C3%BC%C3%A7%C3%BC%C4%9Fe-s%C4%B1ralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program|
+| [PRATİK 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-10--say%C4%B1lar%C4%B1-b%C3%BCy%C3%BCkten-k%C3%BC%C3%A7%C3%BC%C4%9Fe-s%C4%B1ralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program| [ÖDEV 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-9--1-100-aras%C4%B1ndaki-asal-say%C4%B1lar%C4%B1-bulan-program) - Fibonacci Serisi|
 | [PRATİK 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Burç Bulan Program|
 | [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program|
 | [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-13--tek-say%C4%B1lar%C4%B1n-toplam%C4%B1n%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program|
@@ -2556,6 +2556,74 @@ public class AsalSayilariBulanProgram {
             } else {
                 sayac1 = 0;
             }
+        }
+    }
+}
+```
+</details> 
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+## :open_book: ÖDEV 10	- Fibonacci Serisi
+
+### SORU :question:
+Fibonacci Serisi Bulan Program
+  
+Java döngüler ile fibonacci serisi bulan program yazıyoruz. Fibonacci serisinin eleman sayısını kullanıcıdan alın.
+
+:mag: Fibonacci Serisi Nedir ?   
+  
+Fibonacci serisi, her sayının kendinden önceki ile toplanması sonucu oluşan bir sayı dizisidir. Bu şekilde devam eden bu dizide sayılar birbirleriyle oranlandığında altın oran ortaya çıkar, yani bir sayı kendisinden önceki sayıya bölündüğünde altın orana gittikçe yaklaşan bir dizi elde edilir.   
+
+Fibonacci dizisi, 0'dan başlar ve sonsuza kadar. Her rakam, bir önceki rakamla toplanır. Elde edilen sonuç rakamın sağ tarafına yazılır. Fibonacci dizisinin ilk on sayısı şu şekildedir:  
+  
+:pushpin: 9 Elemanlı Fibonacci Serisi : 0 1 1 2 3 5 8 13 21 34         
+```
+ 0 + 1 = 1
+
+ 1 + 1 = 2
+
+ 1 + 2 = 3
+
+ 2 + 3 = 5
+
+ 3 + 5 = 8
+
+ 5 + 8 = 13
+
+ 13 + 8 = 21
+
+ 21 + 8 = 34
+```  
+
+  
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev10;
+
+import java.util.Scanner;
+
+public class FibonacciSerisi {
+    public static void main(String[] args) {
+        int elemanSay, sayi1= 0, sayi2=1, toplam=0;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Fibonacci serisinin eleman sayısını giriniz: ");
+        elemanSay = input.nextInt();
+
+        System.out.print(sayi1+" "+sayi2);
+
+        for (int x = 2; x <= elemanSay; x++) {
+
+            toplam=sayi1+sayi2;
+            System.out.print(" "+toplam);
+
+            sayi1=sayi2;
+            sayi2=toplam;
         }
     }
 }
