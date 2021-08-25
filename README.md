@@ -14,7 +14,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 6](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-6--hesap-makinesi) - Hesap Makinesi| [ÖDEV 6](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-6--girilen-say%C4%B1lardan-min-ve-max-de%C4%9Ferleri-bulma) - Girilen Sayılardan Min ve Max Değerli Bulan Program|
 | [PRATİK 7](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-7--kullan%C4%B1c%C4%B1-giri%C5%9Fi) - Kullanıcı Girişi| [ÖDEV 7](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-7--m%C3%BCkemmel-say%C4%B1-bulan-program) - Mükemmel Sayı Bulan Program|
 | [PRATİK 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-8--s%C4%B1n%C4%B1f%C4%B1-ge%C3%A7me-durumu) - Sınıfı Geçme Durumu| [ÖDEV 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-8--ters-%C3%BC%C3%A7gen-yap%C4%B1m%C4%B1) - Ters Üçgen Yapımı|
-| [PRATİK 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-9--hava-s%C4%B1cakl%C4%B1%C4%9F%C4%B1na-g%C3%B6re-etkinlik-%C3%B6nerme) - Hava Sıcaklığına Göre Etkinlik Önerme|
+| [PRATİK 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-9--hava-s%C4%B1cakl%C4%B1%C4%9F%C4%B1na-g%C3%B6re-etkinlik-%C3%B6nerme) - Hava Sıcaklığına Göre Etkinlik Önerme| [ÖDEV 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-8--ters-%C3%BC%C3%A7gen-yap%C4%B1m%C4%B1) - 1-100 Arasındaki Asal Sayıları Bulan Program|
 | [PRATİK 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-10--say%C4%B1lar%C4%B1-b%C3%BCy%C3%BCkten-k%C3%BC%C3%A7%C3%BC%C4%9Fe-s%C4%B1ralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program|
 | [PRATİK 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Burç Bulan Program|
 | [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program|
@@ -2515,7 +2515,54 @@ public class TersUcgenYapimi {
 ```
 </details> 
   
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+## :open_book: ÖDEV 9	- 1-100 Arasındaki Asal Sayıları Bulan Program
+
+### SORU :question:
+1 – 100 Arasındaki Asal Sayıları Bulan Program   
+  
+Java ile 1 - 100 arasındaki asal sayıları ekrana yazdıran programı yazınız.   
+  
+:heavy_check_mark: Seneryo      
+```
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
+```  
+
+  
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev9;
+
+public class AsalSayilariBulanProgram {
+    public static void main(String[] args) {
+        int sayac1 = 0;
+
+        for (int x = 1; x <= 100; x++) {
+
+            for (int y = 1; y <= x; y++) {
+                if (x % y == 0) {
+                    sayac1++;
+                }
+            }
+
+            if (sayac1 == 2) {
+                System.out.print(x + " ");
+                sayac1 = 0;
+            } else {
+                sayac1 = 0;
+            }
+        }
+    }
+}
+```
+</details> 
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
   
 ## Contributing :hammer_and_wrench:	
 Hatalar, öneriler ve değişiklikler için lütfen bir konu açınız.
