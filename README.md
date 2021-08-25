@@ -13,7 +13,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 5](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-5--daire--alan--%C3%A7evre) - Daire & Alan & Çevre | [ÖDEV 5](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-5--art%C4%B1k-y%C4%B1l-hesaplama) - Artık Yıl Hesaplama|
 | [PRATİK 6](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-6--hesap-makinesi) - Hesap Makinesi| [ÖDEV 6](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-6--girilen-say%C4%B1lardan-min-ve-max-de%C4%9Ferleri-bulma) - Girilen Sayılardan Min ve Max Değerli Bulan Program|
 | [PRATİK 7](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-7--kullan%C4%B1c%C4%B1-giri%C5%9Fi) - Kullanıcı Girişi| [ÖDEV 7](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-7--m%C3%BCkemmel-say%C4%B1-bulan-program) - Mükemmel Sayı Bulan Program|
-| [PRATİK 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-8--s%C4%B1n%C4%B1f%C4%B1-ge%C3%A7me-durumu) - Sınıfı Geçme Durumu|
+| [PRATİK 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-8--s%C4%B1n%C4%B1f%C4%B1-ge%C3%A7me-durumu) - Sınıfı Geçme Durumu| [ÖDEV 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-7--m%C3%BCkemmel-say%C4%B1-bulan-program) - Ters Üçgen Yapımı|
 | [PRATİK 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-9--hava-s%C4%B1cakl%C4%B1%C4%9F%C4%B1na-g%C3%B6re-etkinlik-%C3%B6nerme) - Hava Sıcaklığına Göre Etkinlik Önerme|
 | [PRATİK 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-10--say%C4%B1lar%C4%B1-b%C3%BCy%C3%BCkten-k%C3%BC%C3%A7%C3%BC%C4%9Fe-s%C4%B1ralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program|
 | [PRATİK 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Burç Bulan Program|
@@ -2450,6 +2450,65 @@ public class MukemmelSayiBulanProgram {
             System.out.print(sayi + " Mükemmel sayıdır.");
         } else {
             System.out.print(sayi + " Mükemmel sayı değildir.");
+        }
+    }
+}
+```
+</details> 
+  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+## :open_book: ÖDEV 8	- Ters Üçgen Yapımı
+
+### SORU :question:
+Ters Üçgen Yapımı
+  
+Java ile basamak sayısının kullanıcıdan alınan ve döngüler kullanılarak, yıldızlar(*) ile ekrana ters üçgen çizen programı yazın.
+  
+:heavy_check_mark: Örnek   
+:pushpin: Basamak Sayısı : 10     
+```
+ *******************
+  *****************
+   ***************
+    *************
+     ***********
+      *********
+       *******
+        *****
+         ***
+          *
+```  
+
+  
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev8;
+
+import java.util.Scanner;
+
+public class TersUcgenYapimi {
+    public static void main(String[] args) {
+        int basamak;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Basamak sayısını giriniz: ");
+        basamak = input.nextInt();
+
+        for (int x = 1; x <= basamak; x++) {
+
+            for (int y = 1; y < x; y++) {
+                System.out.print(" ");
+            }
+
+            for (int z = 0; z <= ((2 * basamak) - (2 * x)); z++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 }
