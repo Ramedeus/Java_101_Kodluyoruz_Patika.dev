@@ -12,7 +12,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 4](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-4--taksimetre) - Taksimetre | [ÖDEV 4](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-4--%C3%A7in-zodya%C4%9F%C4%B1-hesaplama) - Çin Zodyağı Hesaplama|
 | [PRATİK 5](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-5--daire--alan--%C3%A7evre) - Daire & Alan & Çevre | [ÖDEV 5](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-5--art%C4%B1k-y%C4%B1l-hesaplama) - Artık Yıl Hesaplama|
 | [PRATİK 6](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-6--hesap-makinesi) - Hesap Makinesi| [ÖDEV 6](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-6--girilen-say%C4%B1lardan-min-ve-max-de%C4%9Ferleri-bulma) - Girilen Sayılardan Min ve Max Değerli Bulan Program|
-| [PRATİK 7](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-7--kullan%C4%B1c%C4%B1-giri%C5%9Fi) - Kullanıcı Girişi|
+| [PRATİK 7](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-prati%CC%87k-7--kullan%C4%B1c%C4%B1-giri%C5%9Fi) - Kullanıcı Girişi| [ÖDEV 7](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-6--girilen-say%C4%B1lardan-min-ve-max-de%C4%9Ferleri-bulma) - Mükemmel Sayı Bulan Program|
 | [PRATİK 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-8--s%C4%B1n%C4%B1f%C4%B1-ge%C3%A7me-durumu) - Sınıfı Geçme Durumu|
 | [PRATİK 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-9--hava-s%C4%B1cakl%C4%B1%C4%9F%C4%B1na-g%C3%B6re-etkinlik-%C3%B6nerme) - Hava Sıcaklığına Göre Etkinlik Önerme|
 | [PRATİK 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-10--say%C4%B1lar%C4%B1-b%C3%BCy%C3%BCkten-k%C3%BC%C3%A7%C3%BC%C4%9Fe-s%C4%B1ralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program|
@@ -2397,7 +2397,66 @@ public class MinVeMaxDegerBulanProgram {
 ```
 </details> 
   
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+## :open_book: ÖDEV 7	- Mükemmel Sayı Bulan Program
+
+### SORU :question:
+Mükemmel Sayı Bulan Program
+  
+Klavyeden girilen bir sayının mükemmel sayı olup/olmadığını bulan ve sayı mükemmel sayı ise ekrana “mükemmel sayıdır.” değilse “mükemmel sayı değildir.” ifadelerini ekrana yazan programı Java dilinde yazınız.
+  
+:mag: Mükemmel Sayı Nedir ?    
+Bir sayının kendisi hariç pozitif tam sayı çarpanları (kalansız bölen sayıların) toplamı kendisine eşit olan sayıya mükemmel sayı denir.
+
+ 
+:heavy_check_mark: Senaryo
+```
+Bir sayı giriniz: 28
+28 Mükemmel sayıdır.
+Bir sayı giriniz: 1
+1 Mükemmel sayı değildir.
+Bir sayı giriniz: 496
+496 Mükemmel sayıdır.
+```  
+
+  
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev7;
+
+import java.util.Scanner;
+
+public class MukemmelSayiBulanProgram {
+    public static void main(String[] args) {
+        int sayi, sonuc = 0;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Bir sayı giriniz: ");
+        sayi = input.nextInt();
+
+        for (int x = 1; x < sayi; x++) {
+            if (sayi % x == 0) {
+
+                sonuc += x;
+            }
+        }
+
+        if (sayi == sonuc) {
+            System.out.print(sayi + " Mükemmel sayıdır.");
+        } else {
+            System.out.print(sayi + " Mükemmel sayı değildir.");
+        }
+    }
+}
+```
+</details> 
+  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
   
 ## Contributing :hammer_and_wrench:	
 Hatalar, öneriler ve değişiklikler için lütfen bir konu açınız.
