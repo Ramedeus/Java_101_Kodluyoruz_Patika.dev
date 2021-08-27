@@ -1936,8 +1936,56 @@ public class EbobVeEkokBulanProgram {
 ```
 </details>        
           
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
           
+## :open_book: PRATİK 22 - Palindrom Sayılar
+
+### SORU :question:
+Java ile bir sayının "Palindrom Sayı" olup olmadığını bulan bir program yapıyoruz.
+          
+:mag: Palindrom Sayı Nedir ?    
+          
+Palindromik sayı, iki taraftan okunduğu zaman okunuş yönüyle aynı olan sayılardır.
+  
+:pushpin: Örnek:      
+1, 4, 8, 99, 101, 363, 4004, 9889....
+                    
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik22;
+
+public class PalindromSayilar {
+
+    static void isPalindrom(int sayi) {
+
+        int tersSayi = 0, hafiza = sayi;
+
+        while (hafiza != 0) {
+            tersSayi = tersSayi + (hafiza % 10);
+            hafiza /= 10;
+            tersSayi=tersSayi*10;
+        }
+        tersSayi=tersSayi/10;
+
+        if (sayi == tersSayi) {
+            System.out.println(sayi + " Palindrom sayıdır.");
+        } else {
+            System.out.println(sayi + " Palindrom sayı değildir.");
+        }
+    }
+
+    public static void main(String[] args) {
+        isPalindrom(623326); // Farklı değer denemek için sayıyı değiştirin.
+    }
+}   
+```
+</details> 
+          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------          
           
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
