@@ -28,7 +28,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 20](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-20---atm-projesi) - ATM Projesi|
 | [PRATİK 21](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-21---ebob-ve-ekok-bulan-program) - EBOB ve EKOK Bulan Program|
 | [PRATİK 22](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-22---palindrom-say%C4%B1lar) - Palindrom Sayılar|
-| [PRATİK 23](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-22---palindrom-say%C4%B1lar) - Recursive ile Fibonacci Serisi|
+| [PRATİK 23](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-23---recursive-fibonacci-serisi-bulan-program) - Recursive ile Fibonacci Serisi|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
