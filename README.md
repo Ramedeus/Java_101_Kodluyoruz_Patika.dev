@@ -28,6 +28,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 20](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-20---atm-projesi) - ATM Projesi|
 | [PRATİK 21](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-21---ebob-ve-ekok-bulan-program) - EBOB ve EKOK Bulan Program|
 | [PRATİK 22](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-22---palindrom-say%C4%B1lar) - Palindrom Sayılar|
+| [PRATİK 23](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-22---palindrom-say%C4%B1lar) - Recursive ile Fibonacci Serisi|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1982,6 +1983,40 @@ public class PalindromSayilar {
         isPalindrom(623326); // Farklı değer denemek için sayıyı değiştirin.
     }
 }   
+```
+</details> 
+          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+          
+## :open_book: PRATİK 23 - Recursive Fibonacci Serisi Bulan Program
+
+### SORU :question:
+Java'da recursive metotlar ile fibonacci serisi bulan program yapıyoruz.   
+                              
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik23;
+
+public class RecursiveFibonacciSerisi {
+
+    static int fbncc(int sayi) {
+
+        if (sayi == 1 || sayi == 2) {
+            return 1;
+        }
+        return fbncc(sayi - 1) + fbncc(sayi - 2);
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println(fbncc(6)); // Test etmek için sayı değerini değiştirin.
+    }
+}
+          
 ```
 </details> 
           
