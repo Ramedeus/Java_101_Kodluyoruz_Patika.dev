@@ -16,7 +16,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-8--s%C4%B1n%C4%B1f%C4%B1-ge%C3%A7me-durumu) - Sınıfı Geçme Durumu| [ÖDEV 8](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-8--ters-%C3%BC%C3%A7gen-yap%C4%B1m%C4%B1) - Ters Üçgen Yapımı|
 | [PRATİK 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-9--hava-s%C4%B1cakl%C4%B1%C4%9F%C4%B1na-g%C3%B6re-etkinlik-%C3%B6nerme) - Hava Sıcaklığına Göre Etkinlik Önerme| [ÖDEV 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-9--1-100-aras%C4%B1ndaki-asal-say%C4%B1lar%C4%B1-bulan-program) - 1-100 Arasındaki Asal Sayıları Bulan Program|
 | [PRATİK 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-10--say%C4%B1lar%C4%B1-b%C3%BCy%C3%BCkten-k%C3%BC%C3%A7%C3%BC%C4%9Fe-s%C4%B1ralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program| [ÖDEV 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-10--fibonacci-serisi) - Fibonacci Serisi|
-| [PRATİK 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Burç Bulan Program|
+| [PRATİK 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Burç Bulan Program| [ÖDEV 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-10--fibonacci-serisi) - Üs Hesabı Yapan Program (Recursive Metot)|
 | [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program|
 | [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-13--tek-say%C4%B1lar%C4%B1n-toplam%C4%B1n%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program|
 | [PRATİK 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-14--girilen-say%C4%B1dan-k%C3%BC%C3%A7%C3%BCk-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program|
@@ -3080,6 +3080,72 @@ public class FibonacciSerisi {
             sayi1=sayi2;
             sayi2=toplam;
         }
+    }
+}
+```
+</details> 
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+  
+## :open_book: ÖDEV 11	- Üs Hesabı Yapan Program (Recursive Metot)
+
+### SORU :question:
+Recursive Metotlar ile Üslü Sayı Hesaplama
+  
+Java dilinde, taban ve üs değerleri kullanıcıdan alınan üs alma işlemini "Recursive" metot kullanarak yapan programı yazınız.   
+  
+:heavy_check_mark: Seneryo      
+```
+Taban değeri giriniz :2
+Üs değerini giriniz : 0
+Sonuç : 1
+Taban değeri giriniz : 2
+Üs değerini giriniz : 3
+Sonuç : 8
+Taban değeri giriniz : 5
+Üs değerini giriniz : 3
+Sonuç : 125
+```  
+
+  
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev11;
+
+import java.util.Scanner;
+
+public class UsHesabiYapanProgram {
+
+    static int snc = 1;
+
+    static int us(int taban, int us) {
+
+        if (us == 0) {
+            return snc;
+        } else {
+            snc *= taban;
+            us--;
+            return us(taban, us);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int us, taban;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Taban değeri giriniz: ");
+        taban = input.nextByte();
+
+        System.out.print("Üs değeri giriniz: ");
+        us = input.nextByte();
+
+        System.out.println("Sonuç: " + us(taban, us)); // Test etmek için sayı değerini değiştirin.
+ 
     }
 }
 ```
