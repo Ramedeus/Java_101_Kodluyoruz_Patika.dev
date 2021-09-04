@@ -17,7 +17,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-9--hava-s%C4%B1cakl%C4%B1%C4%9F%C4%B1na-g%C3%B6re-etkinlik-%C3%B6nerme) - Hava Sıcaklığına Göre Etkinlik Önerme| [ÖDEV 9](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-9--1-100-aras%C4%B1ndaki-asal-say%C4%B1lar%C4%B1-bulan-program) - 1-100 Arasındaki Asal Sayıları Bulan Program|
 | [PRATİK 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-10--say%C4%B1lar%C4%B1-b%C3%BCy%C3%BCkten-k%C3%BC%C3%A7%C3%BC%C4%9Fe-s%C4%B1ralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program| [ÖDEV 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-10--fibonacci-serisi) - Fibonacci Serisi|
 | [PRATİK 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Burç Bulan Program| [ÖDEV 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-11--%C3%BCs-hesab%C4%B1-yapan-program-recursive-metot) - Üs Hesabı Yapan Program (Recursive Metot)|
-| [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program|
+| [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program| [ÖDEV 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-11--%C3%BCs-hesab%C4%B1-yapan-program-recursive-metot) - Asal Sayı Bulan Program (Recursive Metot)|
 | [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-13--tek-say%C4%B1lar%C4%B1n-toplam%C4%B1n%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program|
 | [PRATİK 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-14--girilen-say%C4%B1dan-k%C3%BC%C3%A7%C3%BCk-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program|
 | [PRATİK 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-15--fakt%C3%B6riyel-hesaplayan-program) - Faktöriyel Hesaplayan Program|
@@ -3090,6 +3090,76 @@ public class FibonacciSerisi {
 ## :open_book: ÖDEV 11	- Üs Hesabı Yapan Program (Recursive Metot)
 
 ### SORU :question:
+Recursive Metot ile Asal Sayılar
+  
+Java dilinde "Recursive" metot kullanarak, kullanıcıdan alınan sayının "Asal" sayı olup olmadığını bulan programı yazın.   
+  
+:heavy_check_mark: Seneryo      
+```
+Sayı Giriniz : 22
+22 sayısı ASAL değildir !
+  
+Sayı Giriniz : 2
+2 sayısı ASALDIR !  
+  
+Sayı Giriniz : 39
+39 sayısı ASAL değildir !  
+  
+Sayı Giriniz : 17
+17 sayısı ASALDIR !  
+```  
+
+  
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev12;
+
+import java.util.Scanner;
+
+public class AsalSayiBulanProgram {
+
+    static int asal(int x, int y)
+    {
+        if(y < x)
+        {
+            if(x % y != 0)
+            {
+                return(asal(x, ++y));
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
+    public static void main(String[] args) {
+        int sayi;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Sayı Giriniz: " );
+        sayi=input.nextInt();
+
+        if (asal(sayi,2)==1){
+            System.out.println(sayi+" sayısı ASALDIR !");
+        } else {
+            System.out.println(sayi+" sayısı ASAL değildir !");
+        }
+
+    }
+}
+```
+</details> 
+  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  ## :open_book: ÖDEV 12	- Asal Sayı Bulan Program (Recursive Metot)
+
+### SORU :question:
 Recursive Metotlar ile Üslü Sayı Hesaplama
   
 Java dilinde, taban ve üs değerleri kullanıcıdan alınan üs alma işlemini "Recursive" metot kullanarak yapan programı yazınız.   
@@ -3151,7 +3221,7 @@ public class UsHesabiYapanProgram {
 ```
 </details> 
   
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
 ## Contributing :hammer_and_wrench:	
 Hatalar, öneriler ve değişiklikler için lütfen bir konu açınız.
