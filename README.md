@@ -3124,16 +3124,12 @@ import java.util.Scanner;
 
 public class UsHesabiYapanProgram {
 
-    static int snc = 1;
-
     static int us(int taban, int us) {
 
-        if (us == 0) {
-            return snc;
+        if (us != 0) {
+            return taban*us(taban, us-1);
         } else {
-            snc *= taban;
-            us--;
-            return us(taban, us);
+            return 1;
         }
     }
 
@@ -3149,7 +3145,7 @@ public class UsHesabiYapanProgram {
         us = input.nextByte();
 
         System.out.println("Sonuç: " + us(taban, us)); // Test etmek için sayı değerini değiştirin.
- 
+
     }
 }
 ```
