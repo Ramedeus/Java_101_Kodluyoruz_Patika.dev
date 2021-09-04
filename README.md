@@ -18,7 +18,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-10--say%C4%B1lar%C4%B1-b%C3%BCy%C3%BCkten-k%C3%BC%C3%A7%C3%BC%C4%9Fe-s%C4%B1ralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program| [ÖDEV 10](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-10--fibonacci-serisi) - Fibonacci Serisi|
 | [PRATİK 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-11--bur%C3%A7-bulan-program) - Burç Bulan Program| [ÖDEV 11](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-11--%C3%BCs-hesab%C4%B1-yapan-program-recursive-metot) - Üs Hesabı Yapan Program (Recursive Metot)|
 | [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program| [ÖDEV 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-12--asal-say%C4%B1-bulan-program-recursive-metot) - Asal Sayı Bulan Program (Recursive Metot)|
-| [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-13--tek-say%C4%B1lar%C4%B1n-toplam%C4%B1n%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program|
+| [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-13--tek-say%C4%B1lar%C4%B1n-toplam%C4%B1n%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program| [ÖDEV 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-12--asal-say%C4%B1-bulan-program-recursive-metot) - Desene Göre Metot Oluşturma (Recursive Metot)|
 | [PRATİK 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-14--girilen-say%C4%B1dan-k%C3%BC%C3%A7%C3%BCk-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program|
 | [PRATİK 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-15--fakt%C3%B6riyel-hesaplayan-program) - Faktöriyel Hesaplayan Program|
 | [PRATİK 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-16--%C3%BCsl%C3%BC-say%C4%B1-hesaplayan-program) - Üslü Sayı Hesaplayan Program|
@@ -2869,8 +2869,10 @@ Bir sayının kendisi hariç pozitif tam sayı çarpanları (kalansız bölen sa
 ```
 Bir sayı giriniz: 28
 28 Mükemmel sayıdır.
+  
 Bir sayı giriniz: 1
 1 Mükemmel sayı değildir.
+  
 Bir sayı giriniz: 496
 496 Mükemmel sayıdır.
 ```  
@@ -3090,76 +3092,6 @@ public class FibonacciSerisi {
 ## :open_book: ÖDEV 11	- Üs Hesabı Yapan Program (Recursive Metot)
 
 ### SORU :question:
-Recursive Metot ile Asal Sayılar
-  
-Java dilinde "Recursive" metot kullanarak, kullanıcıdan alınan sayının "Asal" sayı olup olmadığını bulan programı yazın.   
-  
-:heavy_check_mark: Seneryo      
-```
-Sayı Giriniz : 22
-22 sayısı ASAL değildir !
-  
-Sayı Giriniz : 2
-2 sayısı ASALDIR !  
-  
-Sayı Giriniz : 39
-39 sayısı ASAL değildir !  
-  
-Sayı Giriniz : 17
-17 sayısı ASALDIR !  
-```  
-
-  
-### :green_square: CEVAP
-
-<details>
-<summary>Kodu görmek için tıklayınız.</summary>
-  
-```java
-package Odev12;
-
-import java.util.Scanner;
-
-public class AsalSayiBulanProgram {
-
-    static int asal(int x, int y)
-    {
-        if(y < x)
-        {
-            if(x % y != 0)
-            {
-                return(asal(x, ++y));
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        return 1;
-    }
-
-    public static void main(String[] args) {
-        int sayi;
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Sayı Giriniz: " );
-        sayi=input.nextInt();
-
-        if (asal(sayi,2)==1){
-            System.out.println(sayi+" sayısı ASALDIR !");
-        } else {
-            System.out.println(sayi+" sayısı ASAL değildir !");
-        }
-
-    }
-}
-```
-</details> 
-  
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-  ## :open_book: ÖDEV 12	- Asal Sayı Bulan Program (Recursive Metot)
-
-### SORU :question:
 Recursive Metotlar ile Üslü Sayı Hesaplama
   
 Java dilinde, taban ve üs değerleri kullanıcıdan alınan üs alma işlemini "Recursive" metot kullanarak yapan programı yazınız.   
@@ -3169,9 +3101,11 @@ Java dilinde, taban ve üs değerleri kullanıcıdan alınan üs alma işlemini 
 Taban değeri giriniz :2
 Üs değerini giriniz : 0
 Sonuç : 1
+  
 Taban değeri giriniz : 2
 Üs değerini giriniz : 3
 Sonuç : 8
+  
 Taban değeri giriniz : 5
 Üs değerini giriniz : 3
 Sonuç : 125
@@ -3219,7 +3153,166 @@ public class UsHesabiYapanProgram {
     }
 }
 ```
-</details> 
+</details>    
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+## :open_book: ÖDEV 12	- Asal Sayı Bulan Program (Recursive Metot)
+
+### SORU :question:
+Recursive Metot ile Asal Sayılar
+  
+Java dilinde "Recursive" metot kullanarak, kullanıcıdan alınan sayının "Asal" sayı olup olmadığını bulan programı yazın.   
+  
+:heavy_check_mark: Seneryo      
+```
+Sayı Giriniz : 22
+22 sayısı ASAL değildir !   
+  
+Sayı Giriniz : 2
+2 sayısı ASALDIR !     
+  
+Sayı Giriniz : 39
+39 sayısı ASAL değildir !     
+  
+Sayı Giriniz : 17
+17 sayısı ASALDIR !    
+```  
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev12;
+
+import java.util.Scanner;
+
+public class AsalSayiBulanProgram {
+
+    static int asal(int x, int y)
+    {
+        if(y < x)
+        {
+            if(x % y != 0)
+            {
+                return(asal(x, ++y));
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
+    public static void main(String[] args) {
+        int sayi;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Sayı Giriniz: " );
+        sayi=input.nextInt();
+
+        if (asal(sayi,2)==1){
+            System.out.println(sayi+" sayısı ASALDIR !");
+        } else {
+            System.out.println(sayi+" sayısı ASAL değildir !");
+        }
+
+    }
+}
+```
+</details>   
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## :open_book: ÖDEV 13	- Desene Göre Metot Oluşturma (Recursive Metot)
+
+### SORU :question:
+Desene Göre Metot Oluşturma
+  
+Java dilinde kullanıcıdan alınan n değerine göre aşağıdaki kurala uyan döngü kullanmadan bir "Recursive" metot yazın.  
+  
+:pushpin: Kural : Girilen sayı 0 veya negatif olduğu yere kadar girilen sayıdan 5 rakamını çıkarın. Her çıkarma işlemi sırasında ekrana son değeri yazdırın. Sayı negatif veya 0 olduktan sonra tekrar 5 ekleyin. Yine her ekleme işleminde sayının son değerini ekrana yazdırın.     
+  
+:heavy_check_mark: Seneryo      
+```
+N Sayısı : 16
+Çıktısı : 16 11 6 1 -4 1 6 11 16  
+  
+N Sayısı : 10
+Çıktısı : 10 5 0 5 10 
+  
+N Sayısı : 25
+Çıktısı : 25 20 15 10 5 0 5 10 15 20 25 
+  
+N Sayısı : 5
+Çıktısı : 5 0 5   
+```  
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev13;
+
+import java.util.Scanner;
+
+public class DeseneGoreMetotOlusturma {
+
+    static int besCikar(int n, boolean dNoktasi, int sayac) {
+
+        /*
+         n = Kullanıcının girmiş olduğu sayı.
+
+         dNoktasi = Sayının 0'a eşit veya küçük olmasının kontrolünü yapan değişken. Girilen sayı sıfırdan büyük
+         olacağından HER ZAMAN "TRUE"
+
+         sayac = 0 veya -(eksi) değerden önce ekrana basılan sayıların sayısı. Sayaç değişkeni kullanıcıdan alınan
+         n değerine bağlı olarak metot içerisinde değişebilir. Ancak başlangıç değeri HER ZAMAN "0" (sıfır) olmalıdır.
+
+
+         Örnek: 7 2 0 2 7 -> 0'dan önce 2 sayı var (7 ve 2).
+         Sayac değişkeni ile n sayısı artırlmaya başlandığında serinin sonsuza gitmesi engellenecek.
+        */
+
+        if (dNoktasi) {
+            if (n > 0) {
+                System.out.print(n + " ");
+                sayac++;
+                return besCikar(n - 5, true, sayac);
+            } else {
+                return besCikar(n, false, sayac);
+            }
+        } else {
+            System.out.print(n + " ");
+            if (sayac > 0) {
+                sayac--;
+                return besCikar(n + 5, false, sayac);
+            } else {
+                return 0;
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+        int n;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("N Sayısı : ");
+        n = input.nextInt();
+
+        System.out.print("Çıktısı : ");
+        besCikar(n, true, 0);
+
+    }
+}
+```
+</details>   
   
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
