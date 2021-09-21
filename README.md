@@ -30,6 +30,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 22](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-22---palindrom-say%C4%B1lar) - Palindrom Sayılar|
 | [PRATİK 23](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-23---recursive-fibonacci-serisi-bulan-program) - Recursive ile Fibonacci Serisi|
 | [PRATİK 24](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-24---geli%C5%9Fmi%C5%9F-hesap-makinesi) - Gelişmiş Hesap Makinesi|
+| [PRATİK 25](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-24---geli%C5%9Fmi%C5%9F-hesap-makinesi) - Öğrenci Bilgi Sistemi|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -2393,7 +2394,240 @@ public class GelismisHesapMakinesi {
 ```
 </details>          
           
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
+          
+## :open_book: PRATİK 25 - Öğrenci Bilgi Sistemi
+
+### SORU :question:
+Öğrenci Not Sistemi
+
+:heavy_check_mark: Course Sınıfı Özellikleri :   
+Nitelikler : name, code, prefix, note, Teacher   
+Metotlar : Course() , addTeacher() , printTeacher()   
+
+:heavy_check_mark: Teacher Sınıfı Özellikleri :   
+Nitelikler : name, mpno, branch   
+Metotlar : Teacher()   
+
+:heavy_check_mark: Student Sınıfı Özellikleri :   
+Nitelikler : name, stuNo, classes, course1, course2, course3, avarage, isPass   
+Metotlar : Student(), addBulkExamNote(), isPass(), calcAvarage(), printNote()   
+
+:interrobang: Ödev
+
+Course sınıfına derse ait sözlü notu kısmını girin ve ortalamaya etkisini her ders için ayrı ayrı belirtin. Sözlü notlarınıda ortalamaya etkileme yüzdesi ile dahil edin.
+
+Örnek : Fizik dersinine ait sözlü notunun ortalamaya etkisi %20 ise sınav notunun etkisi %80'dir.
+
+Öğrenci sözlüden 90, sınavdan 60 almış ise, o dersin genel ortalamaya etkisi şu şekilde hesaplanır :   
+:pushpin: Fizik Ortalaması : (90 * 0.20) + (60* 0.80);
+ 
+          
+### :green_square: CEVAP
+          
+:heavy_exclamation_mark: MAIN
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik25;
+
+public class OgrenciNotSistemi {
+    public static void main(String[] args) {
+
+        Course mat = new Course("Matematik", "MAT101", "MAT");
+        Course fizik = new Course("Fizik", "FZK101", "FZK");
+        Course kimya = new Course("Kimya", "KMY101", "KMY");
+
+        Teacher t1 = new Teacher("Mahmut Hoca", "90550000000", "MAT");
+        Teacher t2 = new Teacher("Fatma Ayşe", "90550000001", "FZK");
+        Teacher t3 = new Teacher("Ali Veli", "90550000002", "KMY");
+
+        mat.addTeacher(t1);
+        fizik.addTeacher(t2);
+        kimya.addTeacher(t3);
+
+        Student s1 = new Student("İnek Şaban", 4, "140144015", mat, fizik, kimya);
+        s1.addBulkExamNote(50,20,20,20,40,20);
+        s1.isPass();
+
+        Student s2 = new Student("Güdük Necmi", 4, "2211133", mat, fizik, kimya);
+        s2.addBulkExamNote(100,20,50,20,40,20);
+        s2.isPass();
+
+        Student s3 = new Student("Hayta İsmail", 4, "221121312", mat, fizik, kimya);
+        s3.addBulkExamNote(50,20,20,20,40,20);
+        s3.isPass();
+
+    }
+}
+          
+```
+</details>     
+          
+:heavy_exclamation_mark: COURSE
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik25;
+
+public class Course {
+    Teacher courseTeacher;
+    String name;
+    String code;
+    String prefix;
+    int note;
+    int performanceNote;
+    double finalNote;
+
+
+    public Course(String name, String code, String prefix) {
+        this.name = name;
+        this.code = code;
+        this.prefix = prefix;
+        this.note = 0;
+        this.performanceNote = 0;
+        this.finalNote = 0;
+
+    }
+
+    public void addTeacher(Teacher t) {
+        if (this.prefix.equals(t.branch)) {
+            this.courseTeacher = t;
+            System.out.println("İşlem başarılı");
+        } else {
+            System.out.println(t.name + " Akademisyeni bu dersi veremez.");
+        }
+    }
+
+    public void printTeacher() {
+        if (courseTeacher != null) {
+            System.out.println(this.name + " dersinin Akademisyeni : " + courseTeacher.name);
+        } else {
+            System.out.println(this.name + " dersine Akademisyen atanmamıştır.");
+        }
+    }
+}
+          
+```
+</details>   
+          
+:heavy_exclamation_mark: STUDENT
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+
+package Pratik25;
+
+public class Student {
+    String name,stuNo;
+    int classes;
+    Course mat;
+    Course fizik;
+    Course kimya;
+    double avarage;
+    boolean isPass;
+
+
+    Student(String name, int classes, String stuNo, Course mat,Course fizik,Course kimya) {
+        this.name = name;
+        this.classes = classes;
+        this.stuNo = stuNo;
+        this.mat = mat;
+        this.fizik = fizik;
+        this.kimya = kimya;
+        calcAvarage();
+        this.isPass = false;
+    }
+
+
+    public void addBulkExamNote(int mat, int matSoz, int fizik, int fizikSoz, int kimya, int kimyaSoz) {
+
+        if ((mat >= 0 && mat <= 100) && (matSoz >= 0 && matSoz <= 100)) {
+            this.mat.note = mat;
+            this.mat.performanceNote = matSoz;
+            this.mat.finalNote = (this.mat.performanceNote * 0.20) + (this.mat.note* 0.80);
+        }
+
+        if ((fizik >= 0 && fizik <= 100) && (fizikSoz >= 0 && fizikSoz <= 100)) {
+            this.fizik.note = fizik;
+            this.fizik.performanceNote = fizikSoz;
+            this.fizik.finalNote = (this.fizik.performanceNote * 0.20) + (this.fizik.note* 0.80);
+        }
+
+        if ((kimya >= 0 && kimya <= 100) && (kimyaSoz >= 0 && kimyaSoz <= 100)) {
+            this.kimya.note = kimya;
+            this.kimya.performanceNote = kimyaSoz;
+            this.kimya.finalNote = (this.kimya.performanceNote * 0.20) + (this.kimya.note* 0.80);
+        }
+
+    }
+
+    public void isPass() {
+        if (this.mat.finalNote == 0 || this.fizik.finalNote == 0 || this.kimya.finalNote == 0) {
+            System.out.println("Notlar tam olarak girilmemiş");
+        } else {
+            this.isPass = isCheckPass();
+            printNote();
+            System.out.println("Ortalama : " + this.avarage);
+            if (this.isPass) {
+                System.out.println("Sınıfı Geçti. ");
+            } else {
+                System.out.println("Sınıfta Kaldı.");
+            }
+        }
+    }
+
+    public void calcAvarage() {
+        this.avarage = (this.fizik.finalNote + this.kimya.finalNote + this.mat.finalNote) / 3;
+    }
+
+    public boolean isCheckPass() {
+        calcAvarage();
+        return this.avarage > 55;
+    }
+
+    public void printNote(){
+        System.out.println("=========================");
+        System.out.println("Öğrenci : " + this.name);
+        System.out.println("Matematik Notu : " + this.mat.finalNote);
+        System.out.println("Fizik Notu : " + this.fizik.finalNote);
+        System.out.println("Kimya Notu : " + this.kimya.finalNote);
+    }
+}          
+          
+```
+</details>   
+          
+:heavy_exclamation_mark: TEACHER
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+
+package Pratik25;
+
+public class Teacher {
+    String name;
+    String mpno;
+    String branch;
+
+    public Teacher(String name, String mpno, String branch) {
+        this.name = name;
+        this.mpno = mpno;
+        this.branch = branch;
+    }
+}          
+          
+```
+</details>             
+          
+          
+          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------              
+          
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
 ### SORU :question:
