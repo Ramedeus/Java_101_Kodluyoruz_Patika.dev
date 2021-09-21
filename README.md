@@ -30,7 +30,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 22](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-22---palindrom-say%C4%B1lar) - Palindrom Sayılar|
 | [PRATİK 23](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-23---recursive-fibonacci-serisi-bulan-program) - Recursive ile Fibonacci Serisi|
 | [PRATİK 24](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-24---geli%C5%9Fmi%C5%9F-hesap-makinesi) - Gelişmiş Hesap Makinesi|
-| [PRATİK 25](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-24---geli%C5%9Fmi%C5%9F-hesap-makinesi) - Öğrenci Bilgi Sistemi|
+| [PRATİK 25](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-25---%C3%B6%C4%9Frenci-bilgi-sistemi) - Öğrenci Bilgi Sistemi|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
