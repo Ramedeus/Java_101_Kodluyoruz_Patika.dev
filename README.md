@@ -31,6 +31,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 23](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-23---recursive-fibonacci-serisi-bulan-program) - Recursive ile Fibonacci Serisi|
 | [PRATİK 24](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-24---geli%C5%9Fmi%C5%9F-hesap-makinesi) - Gelişmiş Hesap Makinesi|
 | [PRATİK 25](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-25---%C3%B6%C4%9Frenci-bilgi-sistemi) - Öğrenci Bilgi Sistemi|
+| [PRATİK 26](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-25---%C3%B6%C4%9Frenci-bilgi-sistemi) - Boks Oyunu|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -2626,7 +2627,182 @@ public class Teacher {
           
           
           
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------              
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+          
+## :open_book: PRATİK 26 - Boks Oyunu
+
+### SORU :question:
+
+Boks Maçı
+Java Sınıflar ile boks maçını simüle eden programı yazıyoruz.
+
+:interrobang: Ödev
+Projeye ilk kimin dövüşe başlayacağını %50 olasılık ile hesaplayan sistemi entegre ediniz.
+ 
+          
+### :green_square: CEVAP
+          
+:heavy_exclamation_mark: MAIN
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik26;
+
+public class Main {
+    public static void main(String[] args) {
+        Fighter f1 = new Fighter("A", 10, 120, 100, 30);
+        Fighter f2 = new Fighter("B", 20, 85, 85, 40);
+
+        Match match = new Match(f1, f2, 80, 100);
+        match.run();
+
+    }
+}
+          
+```
+</details>     
+          
+:heavy_exclamation_mark: FIGHTER
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik26;
+
+public class Fighter {
+    String name;
+    int health;
+    int weight;
+    int damage;
+    int dodge;
+    double luck;
+
+    Fighter(String name, int damage, int health, int weight, int dodge) {
+        this.name = name;
+        this.health = health;
+        this.weight = weight;
+        this.damage = damage;
+        this.dodge = dodge;
+        //this.luck = luck;
+
+        if (dodge >= 0 && dodge <= 100) {
+            this.dodge = dodge;
+        } else {
+            this.dodge = 0;
+        }
+    }
+
+    int hit(Fighter foe) {
+        System.out.println(this.name + " => " + foe.name + " " + this.damage + " hasar vurdu.");
+
+        if (foe.isDodge()) {
+            System.out.println(foe.name + " gelen hasarı blokladı!");
+            System.out.println("-----------------------");
+
+            return foe.health;
+        }
+
+        if (foe.health - this.damage <= 0) {
+            return 0;
+        }
+        return foe.health - this.damage;
+    }
+
+    boolean isDodge() {
+        double randomNumber = Math.random() * 100;
+        return randomNumber <= this.dodge;
+    }
+}
+          
+```
+</details>   
+          
+:heavy_exclamation_mark: MATCH
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+
+package Pratik26;
+
+public class Match {
+    Fighter f1;
+    Fighter f2;
+    int minWeight;
+    int maxWeight;
+
+    Match(Fighter f1, Fighter f2, int minWeight, int maxWeight) {
+        this.f1 = f1;
+        this.f2 = f2;
+        this.minWeight = minWeight;
+        this.maxWeight = maxWeight;
+    }
+
+    void run() {
+        if (isCheck()) {
+
+            while (this.f1.health > 0 && this.f2.health > 0) {
+
+                while (this.f1.luck == this.f2.luck) {
+                    this.f1.luck = Math.round(Math.random());
+                    this.f2.luck = Math.round(Math.random());
+                }
+
+                System.out.println("\n====YENİ ROUND====");
+
+                if (this.f1.luck > this.f2.luck) {
+                    this.f2.health = this.f1.hit(this.f2);
+                    if (isWin()) {
+                        break;
+                    }
+
+                    this.f1.luck = 0;
+                    this.f2.luck = 1;
+                }
+
+                if (this.f1.luck < this.f2.luck) {
+
+                    this.f1.health = this.f2.hit(this.f1);
+                    if (isWin()) {
+                        break;
+                    }
+
+                    this.f1.luck = 1;
+                    this.f2.luck = 0;
+                }
+
+                System.out.println(this.f1.name + " Sağlık : " + this.f1.health);
+                System.out.println(this.f2.name + " Sağlık : " + this.f2.health);
+            }
+        } else {
+            System.out.println("Sporcuların sikletleri uymuyor.");
+        }
+    }
+
+    boolean isCheck() {
+        return ((this.f1.weight >= minWeight && this.f1.weight <= maxWeight) && (this.f2.weight >= minWeight && this.f2.weight <= maxWeight));
+    }
+
+    boolean isWin() {
+        if (this.f1.health == 0) {
+            System.out.println(this.f2.name + " kazandı !");
+            return true;
+        }
+
+        if (this.f2.health == 0) {
+            System.out.println(this.f1.name + " kazandı !");
+            return true;
+        }
+
+        return false;
+    }
+}         
+          
+```
+</details>               
+                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------          
           
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
