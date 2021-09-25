@@ -32,6 +32,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 24](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-24---geli%C5%9Fmi%C5%9F-hesap-makinesi) - Gelişmiş Hesap Makinesi|
 | [PRATİK 25](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-25---%C3%B6%C4%9Frenci-bilgi-sistemi) - Öğrenci Bilgi Sistemi|
 | [PRATİK 26](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-26---boks-oyunu) - Boks Oyunu|
+| [PRATİK 27](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-26---boks-oyunu) - Maaş Hesaplayıcı|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -2802,55 +2803,139 @@ public class Match {
 ```
 </details>               
                   
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------          
-          
-## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+  
+  
+## :open_book: PRATİK 27 - Maaş Hesaplayıcı
 
 ### SORU :question:
-Vücut Kitle İndeksi Hesaplama
-Java ile kullanıcıdan boy ve kilo değerlerini alıp bir değişkene atayın. Aşağıda ki formüle göre kullanıcının "Vücut Kitle İndeks" değerini hesaplayıp ekrana yazdırın.
+Maaş Hesabı Yapan Sınıf
 
-:pushpin: Formül : Kilo (kg) / Boy(m) * Boy(m)
+Java'da "Employee" adında fabrika çalışanlarını temsil eden ve metotları ile çalışanların maaşlarını hesaplayan bir sınıf yazmalısınız. Bu sınıf 4 nitelik ve 5 metoda sahip olacaktır.
 
+:pushpin: Sınıfın Nitelikleri    
+- name : Çalışanın adı ve soyadı   
+- salary : Çalışanın maaşı   
+- workHours : Haftalık çalışma saati   
+- hireYear : İşe başlangıç yılı   
 
+:pushpin: Sınıfın Metotları   
+- Employee(name,salary,workHours,hireYear) : Kurucu metot olup 4 parametre alacaktır.   
+
+- tax() : Maaşa uygulanan vergiyi hesaplayacaktır.   
+Çalışanın maaşı 1000 TL'den az ise vergi uygulanmayacaktır.   
+Çalışanın maaşı 1000 TL'den fazla ise maaşının %3'ü kadar vergi uygulanacaktır.   
+
+- bonus() : Haftada 40 saatten fazla çalışıldığında saat başına 30 TL olacak şekilde maaşa uygulanacak bonus ücretleri hesaplayacaktır.   
+
+- raiseSalary() : Çalışanın işe başlangıç yılına göre maaş artışını hesaplayacaktır. Şuan ki yılı 2021 olarak alın.   
+Eğer çalışan 10 yıldan az bir süredir çalışıyorsa maaşına %5 zam yapılacaktır.   
+Eğer çalışan 9 yıldan fazla ve 20 yıldan az çalışıyorsa maaşına %10 zam yapılacaktır.   
+Eğer çalışan 19 yıldan fazla çalışıyorsa %15 zam yapılacaktır.   
+
+- toString() : Çalışana ait bilgileri ekrana bastıracaktır. 
+  Not: Program yazılırken toString() girildiğinde overloading yapılması gerekiyor. Bu nedenle metodun adını "personnelInfo()" olarak değiştirdim.
+  
 :heavy_check_mark: Çıktısı
 ```
-Lütfen boyunuzu (metre cinsinde) giriniz : 1,72
-Lütfen kilonuzu giriniz : 105
-Vücut Kitle İndeksiniz : 35.49215792320173
-```
+Adı : kemal   
+Maaşı : 2000.0   
+Çalışma Saati : 45   
+Başlangıç Yılı : 1985   
+Vergi : 60.0   
+Bonus : 150.0   
+Maaş Artışı : 300.0   
+Vergi ve Bonuslar ile birlikte maaş : 2090.0   
+Toplam Maaş : 2390.0  // Toplam maaş çıktısı sitede bulunan örnekte 2300.0 olarak görünüyor. Muhtemelen yanlış yazılmış.
+```  
  
+          
 ### :green_square: CEVAP
-
+          
+:heavy_exclamation_mark: MAIN
 <details>
 <summary>Kodu görmek için tıklayınız.</summary>
   
 ```java
-package Odev1;
-import java.util.Scanner;
+package Pratik27;
 
-public class VucutKitleIndeksi {
+public class Main {
     public static void main(String[] args) {
-
-        // Değişkenler tanımlandı ve veri girişi için scanner kodu kullanıldı.
-        double boy, kilo, kitleIndeks;
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Lütfen boyunuzu (metre cinsinde) giriniz : ");
-        boy = input.nextDouble();
-
-        System.out.print("Lütfen kilonuzu giriniz : ");
-        kilo = input.nextDouble();
-
-        // Vücut Kitle İndeksi hesaplanarak ekrana yazdırıldı.
-        kitleIndeks = kilo / (boy * boy);
-        System.out.print("Vücut Kitle İndeksiniz : " + kitleIndeks);
+        Employee personnel_1 = new Employee("kemal", 2000, 45, 1985);
+        personnel_1.tax();
+        personnel_1.bonus();
+        personnel_1.raiseSalary();
+        personnel_1.personnelInfo();
     }
 }
-
+  
 ```
-</details> 
+</details>     
           
+:heavy_exclamation_mark: EMPLOYEE
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik27;
+
+public class Employee {
+    String name;
+    double salary;
+    int workHours;
+    int hireYear;
+    double tax;
+    double bonus;
+    double raise;
+
+
+    Employee(String name, int salary, int workHours, int hireYear) {
+        this.name = name;
+        this.salary = salary;
+        this.workHours = workHours;
+        this.hireYear = hireYear;
+    }
+
+    void tax() {
+        if (this.salary > 0 && this.salary < 1000) {
+            this.tax = this.salary * 0;
+        } else {
+            this.tax = this.salary * 0.03;
+        }
+    }
+
+    void bonus() {
+        if (this.workHours > 40) {
+            this.bonus = 30 * (this.workHours - 40);
+        }
+    }
+
+    void raiseSalary() {
+        if (2021 - this.hireYear < 10) {
+            this.raise = this.salary * 0.05;
+        } else if (2021 - this.hireYear > 9 && 2021 - this.hireYear < 20) {
+            this.raise = this.salary * 0.10;
+        } else {
+            this.raise = this.salary * 0.15;
+        }
+    }
+
+    void personnelInfo() {
+        System.out.println("Adı : " + this.name);
+        System.out.println("Maaşı : " + this.salary);
+        System.out.println("Çalışma Saati : " + this.workHours);
+        System.out.println("Başlangıç Yılı : " + this.hireYear);
+        System.out.println("Vergi : " + this.tax);
+        System.out.println("Bonus : " + this.bonus);
+        System.out.println("Maaş Artışı : " + this.raise);
+        System.out.println("Vergi ve Bonuslar ile birlikte maaş : " + (this.salary + this.bonus - this.tax));
+        System.out.println("Toplam maaş : " + ((this.salary + this.bonus - this.tax) + this.raise));
+    }
+}
+          
+```
+</details>   
+                    
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
 ## :open_book: ÖDEV 2	- Manav Kasa
