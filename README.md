@@ -32,7 +32,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 24](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-24---geli%C5%9Fmi%C5%9F-hesap-makinesi) - Gelişmiş Hesap Makinesi|
 | [PRATİK 25](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-25---%C3%B6%C4%9Frenci-bilgi-sistemi) - Öğrenci Bilgi Sistemi|
 | [PRATİK 26](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-26---boks-oyunu) - Boks Oyunu|
-| [PRATİK 27](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-26---boks-oyunu) - Maaş Hesaplayıcı|
+| [PRATİK 27](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-27---maa%C5%9F-hesaplay%C4%B1c%C4%B1) - Maaş Hesaplayıcı|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
