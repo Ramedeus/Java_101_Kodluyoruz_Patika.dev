@@ -33,6 +33,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 25](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-25---%C3%B6%C4%9Frenci-bilgi-sistemi) - Öğrenci Bilgi Sistemi|
 | [PRATİK 26](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-26---boks-oyunu) - Boks Oyunu|
 | [PRATİK 27](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-27---maa%C5%9F-hesaplay%C4%B1c%C4%B1) - Maaş Hesaplayıcı|
+| [PRATİK 28](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-27---maa%C5%9F-hesaplay%C4%B1c%C4%B1) - Dizideki Elemanların Ortalamasını Bulan Program|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -2937,6 +2938,87 @@ public class Employee {
 </details>   
                     
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+    
+## :open_book: PRATİK 28 - Dizideki Elemanların Ortalamasını Bulan Program
+
+### SORU :question:
+Dizideki Elemanların Ortalamasını Hesaplayan Program
+  
+:heavy_check_mark: örnek Kod
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        System.out.println(sum / numbers.length);
+    }
+}
+```    
+                                           
+:interrobang: Ödev
+
+Dizideki sayıların harmonik ortalamasını hesaplayan programı yazınız.   
+
+Harmonik Ortalama formülü : n (eleman sayısı) / elemanların harmonik serisi   
+
+:pushpin: Harmonik Seri Formülü :  
+  
+<img src="https://github.com/Ramedeus/Logo/blob/main/harmonic_series.gif "/>  
+          
+### :green_square: CEVAP
+          
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik28;
+
+public class DiziOrtalama {
+    public static void main(String[] args) {
+
+        //Dizideki Elemanların Ortalamasını Bulan Program
+        System.out.println("\n!!! DİZİDEKİ ELEMANLARIN ORTALAMASINI BULAN PROGRAM !!!\n");
+
+        int[] liste = {1, 2, 3, 4, 5};
+        double toplam = 0.0;
+        double ortalama;
+
+        for (int i = 0; i < liste.length; i++) {
+            toplam += liste[i];
+        }
+
+        ortalama = toplam / liste.length;
+
+        System.out.println("ORTALAMA : " + ortalama);
+
+
+        //Dizideki Sayıların Harmonik Ortalamasını Hesaplayan Program
+        System.out.println("\n!!! DİZİDEKİ ELEMANLARIN HARMONİK ORTALAMASINI BULAN PROGRAM !!!\n");
+
+        double[] liste_2 = {1, 2, 3, 4, 5};
+        double harmonikSeriToplami = 0.0;
+        double harmonikSeriOrtalamasi;
+
+        for (double j : liste_2) {
+            harmonikSeriToplami += (1 / j);
+        }
+
+        harmonikSeriOrtalamasi = liste_2.length / harmonikSeriToplami;
+
+        System.out.println("HARMONİK SERİ TOPLAMI \t\t: " + harmonikSeriToplami);
+        System.out.println("HARMONİK SERİ ORTALAMASI \t: " + harmonikSeriOrtalamasi);
+
+    }
+}
+  
+```
+</details>     
+                    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
 
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
