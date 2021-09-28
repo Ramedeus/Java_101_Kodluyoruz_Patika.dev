@@ -2938,6 +2938,57 @@ public class Employee {
                     
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
+## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
+
+### SORU :question:
+Vücut Kitle İndeksi Hesaplama
+Java ile kullanıcıdan boy ve kilo değerlerini alıp bir değişkene atayın. Aşağıda ki formüle göre kullanıcının "Vücut Kitle İndeks" değerini hesaplayıp ekrana yazdırın.
+
+:pushpin: Formül:
+
+- Kilo (kg) / Boy(m) * Boy(m)  
+
+
+:heavy_check_mark: Örnek Çıktı
+```
+Lütfen boyunuzu (metre cinsinde) giriniz : 1,72
+Lütfen kilonuzu giriniz : 105
+Vücut Kitle İndeksiniz : 35.49215792320173
+```
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev1;
+import java.util.Scanner;
+
+public class VucutKitleIndeksi {
+    public static void main(String[] args) {
+
+        // Değişkenler tanımlandı ve veri girişi için scanner kodu kullanıldı.
+        double boy, kilo, kitleIndeks;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Lütfen boyunuzu (metre cinsinde) giriniz : ");
+        boy = input.nextDouble();
+
+        System.out.print("Lütfen kilonuzu giriniz : ");
+        kilo = input.nextDouble();
+
+        // Vücut Kitle İndeksi hesaplanarak ekrana yazdırıldı.
+        kitleIndeks = kilo / (boy * boy);
+        System.out.print("Vücut Kitle İndeksiniz : " + kitleIndeks);
+    }
+}
+
+```
+</details>   
+          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+  
 ## :open_book: ÖDEV 2	- Manav Kasa
 
 ### SORU :question:
