@@ -2945,7 +2945,7 @@ public class Employee {
 ### SORU :question:
 Dizideki Elemanların Ortalamasını Hesaplayan Program
   
-:heavy_check_mark: örnek Kod
+:heavy_check_mark: Örnek Kod
 ```java
 public class Main {
     public static void main(String[] args) {
