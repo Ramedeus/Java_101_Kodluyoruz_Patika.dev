@@ -34,6 +34,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 26](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-26---boks-oyunu) - Boks Oyunu|
 | [PRATİK 27](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-27---maa%C5%9F-hesaplay%C4%B1c%C4%B1) - Maaş Hesaplayıcı|
 | [PRATİK 28](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-28---dizideki-elemanlar%C4%B1n-ortalamas%C4%B1n%C4%B1-bulan-program) - Dizideki Elemanların Ortalamasını Bulan Program|
+| [PRATİK 29](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-28---dizideki-elemanlar%C4%B1n-ortalamas%C4%B1n%C4%B1-bulan-program) - Dizideki Maksimum ve Minimum Değerleri Bulan Program|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -3011,6 +3012,131 @@ public class DiziOrtalama {
 
         System.out.println("HARMONİK SERİ TOPLAMI \t\t: " + harmonikSeriToplami);
         System.out.println("HARMONİK SERİ ORTALAMASI \t: " + harmonikSeriOrtalamasi);
+
+    }
+}
+  
+```
+</details>     
+                    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+  
+## :open_book: PRATİK 29 - Dizideki Maksimum ve Minimum Değerleri Bulan Program
+
+### SORU :question:
+Dizideki Maksimum ve Minimum Değerleri Bulan Program   
+  
+:heavy_check_mark: Örnek Kod
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[] list = {56, 34, 1, 8, 101, -2, -33};
+      
+        int min = list[0];
+        int max = list[0];
+
+        for (int i : list) {
+            if (i < min) {
+                min = i;
+            }
+            if (i > max) {
+                max = i;
+            }
+        }
+
+        System.out.println("Minimum Değer " + min);
+        System.out.println("Maximum Değer " + max);
+
+    }
+}
+```    
+                                           
+:interrobang: Ödev
+
+Dizideki elemanların girilen sayıdan küçük en yakın sayıyı ve en büyük en yakın sayıyı bulan programı yazınız.   
+
+:heavy_check_mark: Örnek Çıktı  
+```java 
+Dizi : {15,12,788,1,-1,-778,2,0}
+Girilen Sayı : 5
+Girilen sayıdan küçük en yakın sayı : 2
+Girilen sayıdan büyük en yakın sayı : 12  
+```
+  
+### :green_square: CEVAP
+          
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik29;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class DizidekiMaxMinDegerBulma {
+
+    public static void main(String[] args) {
+
+        //Dizideki Elemanların Max ve Min Değerlerini Bulan Program
+        System.out.print("\n!!! DİZİDEKİ ELEMANLARIN MAX VE MİN DEĞERLERİNİ BULAN PROGRAM !!!\n");
+
+        int[] list1 = {56, 34, 1, 8, 101, -2, -33};
+        String list = Arrays.toString(list1);
+        System.out.println("Dizi : " + list);
+
+
+        int min = list1[0];
+        int max = list1[0];
+
+        for (int i = 0; i < list1.length; i++) {
+            if (max < list1[i]) {
+                max = list1[i];
+            }
+        }
+
+        for (int i = 0; i < list1.length; i++) {
+            if (min > list1[i]) {
+                min = list1[i];
+            }
+        }
+
+        System.out.println("Minimum Değer " + min);
+        System.out.println("Maximum Değer " + max);
+
+
+        //Dizideki elemanların girilen sayıdan küçük en yakın sayıyı ve en büyük en yakın sayıyı bulan program
+        System.out.print("\n!!! DİZİDEKİ ELEMANLARIN GİRİLEN SAYIDAN KÜÇÜK EN YAKIN SAYIYI VE EN BÜYÜK EN YAKIN SAYIYI BULAN PROGRAM !!!\n");
+
+        int[] list2 = {15,12,788,1,-1,-778,2,0};
+
+        Scanner input = new Scanner(System.in);
+        int deger;
+
+        String liste = Arrays.toString(list2);
+        System.out.println("Dizi : " + liste);
+
+        System.out.print("Girilen Sayı : ");
+        deger = input.nextInt();
+
+        for (int j : list2) {
+            if (j > deger) {
+                if (j <= max) {
+                    max = j;
+                }
+            }
+        }
+
+        for (int j : list2) {
+            if (j < deger) {
+                if (j >= min) {
+                    min = j;
+                }
+            }
+        }
+
+        System.out.println("Girilen sayıdan küçük en yakın sayı : " + min);
+        System.out.println("Girilen sayıdan büyük en yakın sayı : " + max);
 
     }
 }
