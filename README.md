@@ -3107,6 +3107,7 @@ public class DizidekiMaxMinDegerBulma {
 
         //Dizideki elemanların girilen sayıdan küçük en yakın sayıyı ve en büyük en yakın sayıyı bulan program
         System.out.print("\n!!! DİZİDEKİ ELEMANLARIN GİRİLEN SAYIDAN KÜÇÜK EN YAKIN SAYIYI VE EN BÜYÜK EN YAKIN SAYIYI BULAN PROGRAM !!!\n");
+        // Bir önceki programda bulunan max ve min değerler bu programda da kullanılmaktadır. Bu program pratik amaçlı yapılan program ile bütünleşiktir.
 
         int[] list2 = {15,12,788,1,-1,-778,2,0};
 
