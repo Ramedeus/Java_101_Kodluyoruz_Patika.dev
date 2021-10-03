@@ -35,7 +35,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 27](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-27---maa%C5%9F-hesaplay%C4%B1c%C4%B1) - Maaş Hesaplayıcı|
 | [PRATİK 28](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-28---dizideki-elemanlar%C4%B1n-ortalamas%C4%B1n%C4%B1-bulan-program) - Dizideki Elemanların Ortalamasını Bulan Program|
 | [PRATİK 29](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-29---dizideki-maksimum-ve-minimum-de%C4%9Ferleri-bulan-program) - Dizideki Maksimum ve Minimum Değerleri Bulan Program|
-| [PRATİK 30](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-29---dizideki-maksimum-ve-minimum-de%C4%9Ferleri-bulan-program) - Çok Boyutlu Diziler ile A Harfi Yazdıran Program|
+| [PRATİK 30](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-30---%C3%A7ok-boyutlu-diziler-ile-a-harfi-yazd%C4%B1ran-program) - Çok Boyutlu Diziler ile A Harfi Yazdıran Program|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
