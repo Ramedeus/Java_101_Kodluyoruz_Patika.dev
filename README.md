@@ -35,6 +35,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 27](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-27---maa%C5%9F-hesaplay%C4%B1c%C4%B1) - Maaş Hesaplayıcı|
 | [PRATİK 28](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-28---dizideki-elemanlar%C4%B1n-ortalamas%C4%B1n%C4%B1-bulan-program) - Dizideki Elemanların Ortalamasını Bulan Program|
 | [PRATİK 29](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-29---dizideki-maksimum-ve-minimum-de%C4%9Ferleri-bulan-program) - Dizideki Maksimum ve Minimum Değerleri Bulan Program|
+| [PRATİK 30](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-29---dizideki-maksimum-ve-minimum-de%C4%9Ferleri-bulan-program) - Çok Boyutlu Diziler ile A Harfi Yazdıran Program|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -3145,7 +3146,97 @@ public class DizidekiMaxMinDegerBulma {
 ```
 </details>     
                     
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  
+## :open_book: PRATİK 30 - Çok Boyutlu Diziler ile A Harfi Yazdıran Program
+
+### SORU :question:
+Çok Boyutlu Dizile ile A Harfi Oluşturma   
+  
+:heavy_check_mark: Örnek Kod
+```java
+public class Main {
+    public static void main(String[] args) {
+        String[][] letter = new String[6][4];
+
+        for (int i = 0; i < letter.length; i++) {
+            for (int j = 0; j < letter[i].length; j++) {
+                if (i == 0 || i == 2) {
+                    letter[i][j] = " * ";
+                } else if (j == 0 || j == 3) {
+                    letter[i][j] = " * ";
+                } else {
+                    letter[i][j] = "   ";
+                }
+            }
+        }
+
+        for (String[] row : letter){
+            for (String col : row){
+                System.out.print(col);
+            }
+            System.out.println();
+        }
+    }
+}
+```    
+                                           
+:interrobang: Ödev
+
+Çok boyutlu diziler kullanılarak "yıldızlar" ile ekrana "B" harfi yazan programı yazınız.    
+
+:heavy_check_mark: Örnek Çıktı  
+```java 
+ *  *  *  * 
+ *        * 
+ *        * 
+ *  *  *  * 
+ *        * 
+ *        * 
+ *  *  *  * 
+```
+  
+### :green_square: CEVAP
+          
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik30;
+
+public class DizilerAHarfiYazdiranProgram {
+    public static void main(String[] args) {
+
+        //Çok Boyutlu Diziler ile B Harfi Yazdıran Program
+        System.out.print("\n!!! ÇOK BOYUTLU DİZİLER İLE 'B' HARFİ YAZDIRAN PROGRAM !!!\n");
+
+        String[][] letter = new String[7][4];
+
+        for (int i = 0; i < letter.length; i++) {
+            for (int j = 0; j < letter[i].length; j++) {
+                if (i == 0 || i == 3 || i==6) {
+                    letter[i][j] = " * ";
+                } else if (j == 0 || j == 3) {
+                    letter[i][j] = " * ";
+                } else {
+                    letter[i][j] = "   ";
+                }
+            }
+        }
+
+        for (String[] row : letter){
+            for (String col : row){
+                System.out.print(col);
+            }
+            System.out.println();
+        }
+    }
+}
+  
+```
+</details>     
+                    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
 
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
