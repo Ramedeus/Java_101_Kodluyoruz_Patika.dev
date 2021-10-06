@@ -36,6 +36,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 28](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-28---dizideki-elemanlar%C4%B1n-ortalamas%C4%B1n%C4%B1-bulan-program) - Dizideki Elemanların Ortalamasını Bulan Program|
 | [PRATİK 29](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-29---dizideki-maksimum-ve-minimum-de%C4%9Ferleri-bulan-program) - Dizideki Maksimum ve Minimum Değerleri Bulan Program|
 | [PRATİK 30](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-30---%C3%A7ok-boyutlu-diziler-ile-a-harfi-yazd%C4%B1ran-program) - Çok Boyutlu Diziler ile A Harfi Yazdıran Program|
+| [PRATİK 31](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-30---%C3%A7ok-boyutlu-diziler-ile-a-harfi-yazd%C4%B1ran-program) - Dizideki Tekrar Eden Sayıları Bulan Program|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -3237,6 +3238,106 @@ public class DizilerAHarfiYazdiranProgram {
 </details>     
                     
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+  
+  
+## :open_book: PRATİK 31 - Dizideki Tekrar Eden Sayıları Bulan Program
+
+### SORU :question:
+Dizideki Tekrar Eden Sayıları Bulan Program   
+                                           
+:interrobang: Ödev
+
+Bir sayı dizisindeki tekrar eden çift sayıları berlirten program yazınız.   
+    
+### :green_square: CEVAP
+          
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik31;
+
+import java.util.Arrays;
+
+public class DiziTekrarEdenSayi {
+
+
+    static boolean isFind(int[] arr, int value) {
+        for (int i : arr) {
+            if (i == value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public static void main(String[] args) {
+
+        //Dizideki Tekrar Eden Sayıları Bulan Program
+        System.out.print("\n!!! DİZİDEKİ TEKRAR EDEN SAYILARI BULAN PROGRAM !!!\n");
+
+        int[] list1 = {3, 7, 3, 3, 2, 9, 10, 21, 1, 33, 9, 1};
+        int[] duplicate = new int[list1.length];
+        int startIndex1 = 0;
+
+        String lst1 = Arrays.toString(list1);
+        System.out.println("Liste: " + lst1);
+
+        for (int i = 0; i < list1.length; i++) {
+            for (int j = 0; j < list1.length; j++) {
+                if ((i != j) && (list1[i] == list1[j])) {
+                    if (!isFind(duplicate, list1[i])) {
+                        duplicate[startIndex1++] = list1[i];
+                    }
+                    break;
+                }
+
+            }
+        }
+
+        for (int value : duplicate) {
+            if (value != 0) {
+                System.out.println(value);
+            }
+        }
+
+
+        //Dizideki Çift Sayıları Bulan Program
+        System.out.print("\n!!! DİZİDEKİ ÇİFT SAYILARI BULAN PROGRAM !!!\n");
+
+        int[] list2 = {3, 7, 3, 3, 2, 9, 10, 21, 1, 33, 9, 1};
+        int[] even = new int[list2.length];
+        int startIndex = 0;
+
+        String lst2 = Arrays.toString(list2);
+        System.out.println("Liste: " + lst2);
+
+        for (int i = 0; i < list2.length; i++) {
+            for (int j = 0; j < list2.length; j++) {
+                if ((i != j) && (list2[i] % 2 == 0)) {
+
+                    even[startIndex++] = list2[i];
+                    break;
+
+                }
+
+            }
+        }
+
+        for (int value : even) {
+            if (value != 0) {
+                System.out.println(value);
+            }
+        }
+
+    }
+}
+  
+```
+</details>     
+                    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
 
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
