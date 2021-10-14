@@ -20,7 +20,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-12--girilen-say%C4%B1lardan-%C3%A7ift-say%C4%B1lar%C4%B1-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program| [ÖDEV 12](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-12--asal-say%C4%B1-bulan-program-recursive-metot) - Asal Sayı Bulan Program (Recursive Metot)|
 | [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-13--tek-say%C4%B1lar%C4%B1n-toplam%C4%B1n%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program| [ÖDEV 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-13--desene-g%C3%B6re-metot-olu%C5%9Fturma-recursive-metot) - Desene Göre Metot Oluşturma (Recursive Metot)|
 | [PRATİK 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-14--girilen-say%C4%B1dan-k%C3%BC%C3%A7%C3%BCk-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program| [ÖDEV 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-14--dizideki-elemanlar%C4%B1-s%C4%B1ralama) - Dizideki Elemanları Sıralama|
-| [PRATİK 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-15--fakt%C3%B6riyel-hesaplayan-program) - Faktöriyel Hesaplayan Program|
+| [PRATİK 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-15--fakt%C3%B6riyel-hesaplayan-program) - Faktöriyel Hesaplayan Program| [ÖDEV 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-14--dizideki-elemanlar%C4%B1-s%C4%B1ralama) - Dizideki Elemanların Frekansı|
 | [PRATİK 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-16--%C3%BCsl%C3%BC-say%C4%B1-hesaplayan-program) - Üslü Sayı Hesaplayan Program|
 | [PRATİK 17](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-17---armstrong-say%C4%B1lar%C4%B1-bulan-program) - Armstrong Sayıları Bulan Program|
 | [PRATİK 18](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-18--harmonik-say%C4%B1lar%C4%B1-bulan-program) - Harmonik Sayıları Bulan Program|
@@ -3928,7 +3928,7 @@ public class TersUcgenYapimi {
   
 Java ile 1 - 100 arasındaki asal sayıları ekrana yazdıran programı yazınız.   
   
-:heavy_check_mark: Seneryo      
+:heavy_check_mark: Senaryo      
 ```
 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
 ```  
@@ -4043,7 +4043,7 @@ Recursive Metotlar ile Üslü Sayı Hesaplama
   
 Java dilinde, taban ve üs değerleri kullanıcıdan alınan üs alma işlemini "Recursive" metot kullanarak yapan programı yazınız.   
   
-:heavy_check_mark: Seneryo      
+:heavy_check_mark: Senaryo      
 ```
 Taban değeri giriniz :2
 Üs değerini giriniz : 0
@@ -4107,7 +4107,7 @@ Recursive Metot ile Asal Sayılar
   
 Java dilinde "Recursive" metot kullanarak, kullanıcıdan alınan sayının "Asal" sayı olup olmadığını bulan programı yazın.   
   
-:heavy_check_mark: Seneryo      
+:heavy_check_mark: Senaryo      
 ```
 Sayı Giriniz : 22
 22 sayısı ASAL değildir !   
@@ -4179,7 +4179,7 @@ Java dilinde kullanıcıdan alınan n değerine göre aşağıdaki kurala uyan d
   
 :pushpin: Kural : Girilen sayı 0 veya negatif olduğu yere kadar girilen sayıdan 5 rakamını çıkarın. Her çıkarma işlemi sırasında ekrana son değeri yazdırın. Sayı negatif veya 0 olduktan sonra tekrar 5 ekleyin. Yine her ekleme işleminde sayının son değerini ekrana yazdırın.     
   
-:heavy_check_mark: Seneryo      
+:heavy_check_mark: Senaryo      
 ```
 N Sayısı : 16
 Çıktısı : 16 11 6 1 -4 1 6 11 16  
@@ -4266,7 +4266,7 @@ Dizideki Elemanları Sıralama
   
 Java dilinde, dizideki elemanları küçükten büyüğe sıralayan programı yazınız. Dizinin boyutunu ve dizinin elemanlarını kullanıcıdan alınız.   
   
-:heavy_check_mark: Seneryo      
+:heavy_check_mark: Senaryo      
 ```
 Dizinin boyutu n : 5
 Dizinin elemanlarını giriniz :
@@ -4335,6 +4335,122 @@ public class DizidekiElemanlariSiralama {
         for (int j : list) {
             System.out.print(j + " ");
         }
+    }
+}
+
+```
+</details>   
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+  
+## :open_book: ÖDEV 15	- Dizideki Elemanların Frekansı
+
+### SORU :question:
+Dizideki Elemanların Frekansını Bulma   
+  
+Java dilinde, dizideki elemanların kaç kez tekrar edildiğini yani frekanslarını bulan programı yazınız.   
+  
+:heavy_check_mark: Senaryo      
+```
+Dizi : [10, 20, 20, 10, 10, 20, 5, 20]
+Tekrar Sayıları
+10 sayısı 3 kere tekrar edildi.
+20 sayısı 4 kere tekrar edildi.
+5 sayısı 1 kere tekrar edildi.
+```  
+  
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev15;
+
+import java.util.Arrays;
+
+public class DizidekiElemanlarinFrekansi {
+    static boolean isFind(int[] arr, int value) {
+        for (int i : arr) {
+            if (i == value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+
+        //Dizideki Elemanların Frekansı
+        System.out.print("\n!!! DİZİDEKİ ELEMANLARIN FREKANSINI BULMA !!!\n");
+
+        int[] list = {10, 20, 20, 10, 10, 20, 5, 20};
+
+        int[] duplicate = new int[list.length];
+        int[] repetitive = new int[list.length];
+
+        int startIndex = 0;
+        int counter1 = 0;
+        int counter2 = 0;
+        int temp;
+
+
+        String lst1 = Arrays.toString(list);
+        System.out.println("Dizi : " + lst1);
+
+
+        //Dizinin elemanları bu kod bloğunda küçükten büyüğe sıralanıyor.
+
+        while (counter1 < list.length) {
+            for (int i = 0; i < list.length - 1; i++) {
+                if (list[i] > list[i + 1]) {
+                    temp = list[i];
+                    list[i] = list[i + 1];
+                    list[i + 1] = temp;
+                }
+
+            }
+            counter1++;
+        }
+
+        //Bu kod bloğunda dizinin elemanları bulunuyor.
+
+        for (int k : list) {
+            for (int i : list) {
+                if ((k == i)) {
+                    if (!isFind(duplicate, k)) {
+                        duplicate[startIndex++] = k;
+                    }
+                    break;
+                }
+
+            }
+        }
+
+        //Bu kod bloğunda dizinin elemanlarının frekansları bulunuyor.
+
+        for (int x = 0; x < duplicate.length; x++) {
+            for (int i : list) {
+                if (duplicate[x] == i) {
+                    counter2++;
+                }
+            }
+            if (duplicate[x] != 0) {
+                repetitive[x] = counter2;
+                counter2 = 0;
+            }
+        }
+
+        //Dizinin elemanları ve elemanların frekansları eşleştirilerek ekrana yazdırılması.
+
+        System.out.println("Tekrar Sayıları");
+
+        for (int z = 0; z < list.length; z++) {
+            if(duplicate[z]!=0){
+                System.out.println(duplicate[z] + " sayısı " + repetitive[z] + " kere tekrar edildi.");
+            }
+        }
+
     }
 }
 
