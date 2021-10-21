@@ -21,7 +21,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-13--tek-say%C4%B1lar%C4%B1n-toplam%C4%B1n%C4%B1-bulan-program) - Tek Sayıların Toplamını Bulan Program| [ÖDEV 13](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-13--desene-g%C3%B6re-metot-olu%C5%9Fturma-recursive-metot) - Desene Göre Metot Oluşturma (Recursive Metot)|
 | [PRATİK 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-14--girilen-say%C4%B1dan-k%C3%BC%C3%A7%C3%BCk-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program| [ÖDEV 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-14--dizideki-elemanlar%C4%B1-s%C4%B1ralama) - Dizideki Elemanları Sıralama|
 | [PRATİK 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-15--fakt%C3%B6riyel-hesaplayan-program) - Faktöriyel Hesaplayan Program| [ÖDEV 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-15--dizideki-elemanlar%C4%B1n-frekans%C4%B1) - Dizideki Elemanların Frekansı|
-| [PRATİK 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-16--%C3%BCsl%C3%BC-say%C4%B1-hesaplayan-program) - Üslü Sayı Hesaplayan Program|
+| [PRATİK 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-16--%C3%BCsl%C3%BC-say%C4%B1-hesaplayan-program) - Üslü Sayı Hesaplayan Program| [ÖDEV 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-15--dizideki-elemanlar%C4%B1n-frekans%C4%B1) - Matris Transpozunu Bulma|
 | [PRATİK 17](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-17---armstrong-say%C4%B1lar%C4%B1-bulan-program) - Armstrong Sayıları Bulan Program|
 | [PRATİK 18](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-18--harmonik-say%C4%B1lar%C4%B1-bulan-program) - Harmonik Sayıları Bulan Program|
 | [PRATİK 19](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-19---y%C4%B1ld%C4%B1z-ile-%C3%BC%C3%A7gen-yap%C4%B1m%C4%B1) - Yıldız ile Üçgen Yapımı|
@@ -4451,6 +4451,95 @@ public class DizidekiElemanlarinFrekansi {
             }
         }
 
+    }
+}
+
+```
+</details>   
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+  
+## :open_book: ÖDEV 16	- Matris Transpozunu Bulma
+
+### SORU :question:
+Matrisin Transpozu
+  
+Java dilinde, çok boyutlu diziler ile oluşturulmuş matrisin transpozunu bulan programı yazınız.   
+
+Matrisin transpozunu (devriğini) almak, matrisin aynı numaralı satırları ile sütunlarının yer değiştirmesi demektir. Bu işlem sonucu elde edilen matris, başlangıçtaki matrisin transpozudur (devriğidir). Bu aşamada kxn’lik bir matrisin transpozu (devriği) nxk’lik bir matris olur. Örneğin bir A matrisimiz olsun. Bu A matrisinin transpozu (devriği), A^T (A üzeri T) ile gösterilir.   
+
+Örneğin aşağıdaki 2x3’lik A matrisinin transpozu (devriği), 2x3’lük bir A^T matrisidir.   
+  
+  
+:heavy_check_mark: Senaryo      
+```
+Matris : 
+2    3    4    
+5    6    4    
+Transpoze : 
+2    5    
+3    6    
+4    4 
+```  
+  
+```
+Matris : 
+1    2    3    
+4    5    6    
+Transpoze : 
+1    4    
+2    5    
+3    6   
+```   
+  
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Odev16;
+
+public class MatrisTranspozunuBulma {
+
+    static void transpoze(int[][] arr) {
+
+        int[][] trpz = new int[arr[0].length][arr.length];
+
+        for (int x = 0; x < arr.length; x++) {
+            for (int y = 0; y < arr[0].length; y++) {
+                trpz[y][x] = arr[x][y];
+            }
+        }
+
+        System.out.println("Transpoze : ");
+
+        for (int[] ints : trpz) {
+            for (int j = 0; j < trpz[0].length; j++) {
+                System.out.print(ints[j]);
+                System.out.print("\t");
+            }
+            System.out.println();
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        int[][] list = {{1, 2, 3}, {4, 5, 6}};
+
+        System.out.println("Matris : ");
+        for (int[] ints : list) {
+            for (int j = 0; j < list[0].length; j++) {
+                System.out.print(ints[j]);
+                System.out.print("\t");
+            }
+            System.out.println();
+        }
+
+        System.out.println("===============================");
+
+        transpoze(list);
     }
 }
 
