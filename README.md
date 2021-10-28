@@ -38,7 +38,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 30](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-30---%C3%A7ok-boyutlu-diziler-ile-a-harfi-yazd%C4%B1ran-program) - Çok Boyutlu Diziler ile A Harfi Yazdıran Program|
 | [PRATİK 31](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-31---dizideki-tekrar-eden-say%C4%B1lar%C4%B1-bulan-program) - Dizideki Tekrar Eden Sayıları Bulan Program|
 | [PRATİK 32](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-32---say%C4%B1-tahmin-oyunu) - Sayı Tahmin Oyunu|
-| [PRATİK 33](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-32---say%C4%B1-tahmin-oyunu) - Palindromik Kelimeleri Bulan Program|
+| [PRATİK 33](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-33---palindromik-kelime) - Palindromik Kelimeleri Bulan Program|
 
 
 
