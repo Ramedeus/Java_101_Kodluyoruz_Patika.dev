@@ -38,6 +38,8 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 30](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-30---%C3%A7ok-boyutlu-diziler-ile-a-harfi-yazd%C4%B1ran-program) - Çok Boyutlu Diziler ile A Harfi Yazdıran Program|
 | [PRATİK 31](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-31---dizideki-tekrar-eden-say%C4%B1lar%C4%B1-bulan-program) - Dizideki Tekrar Eden Sayıları Bulan Program|
 | [PRATİK 32](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-32---say%C4%B1-tahmin-oyunu) - Sayı Tahmin Oyunu|
+| [PRATİK 33](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-32---say%C4%B1-tahmin-oyunu) - Palindromik Kelimeleri Bulan Program|
+
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -3475,6 +3477,90 @@ public class SayiTahminOyunu {
                     
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
 
+## :open_book: PRATİK 33 - Palindromik Kelime
+
+### SORU :question:
+Java dilinde kullanıcının girdiği kelimenin "Palindromik" olup olmadığı bulan bir program yazıyoruz.   
+
+Eğer bir kelimenin tersten okunuşu yine aynı kelimeyi veriyorsa o kelime "Palindromik Kelime'dir".   
+
+:heavy_check_mark: Örnek :
+```  
+abba , asa , kavak, kayak  
+```  
+  
+<details>
+<summary>Örnek kod.</summary>
+  
+```java  
+
+public class Main {
+    static boolean isPalindrome(String str) {
+        int i = 0, j = str.length() - 1;
+        while (i < j) {
+            if (str.charAt(i) != str.charAt(j))
+                return false;
+            i++;
+            j--;
+        }
+        return true;
+    }
+
+    static boolean isPalindrome2(String str) {
+        String reverse = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reverse += str.charAt(i);
+        }
+
+        if (str.equals(reverse))
+            return true;
+        else
+            return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isPalindrome("abba"));
+    }
+} 
+  
+```
+</details>   
+    
+### :green_square: CEVAP
+          
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik33;
+
+public class PalindromikKelime {
+    static boolean isPalindrome(String text) {
+
+        int length = text.length();
+        int forward = 0;
+        int backward = length - 1;
+        while (backward > forward) {
+            char forwardChar = text.charAt(forward++);
+            char backwardChar = text.charAt(backward--);
+            if (forwardChar != backwardChar)
+                return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println(isPalindrome("abba"));
+
+    }
+}
+  
+```
+</details>     
+                    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+  
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
 ### SORU :question:
