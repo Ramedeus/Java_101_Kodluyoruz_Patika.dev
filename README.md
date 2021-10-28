@@ -37,6 +37,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 29](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-29---dizideki-maksimum-ve-minimum-de%C4%9Ferleri-bulan-program) - Dizideki Maksimum ve Minimum Değerleri Bulan Program|
 | [PRATİK 30](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-30---%C3%A7ok-boyutlu-diziler-ile-a-harfi-yazd%C4%B1ran-program) - Çok Boyutlu Diziler ile A Harfi Yazdıran Program|
 | [PRATİK 31](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-31---dizideki-tekrar-eden-say%C4%B1lar%C4%B1-bulan-program) - Dizideki Tekrar Eden Sayıları Bulan Program|
+| [PRATİK 32](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-31---dizideki-tekrar-eden-say%C4%B1lar%C4%B1-bulan-program) - Sayı Tahmin Oyunu|
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -3338,6 +3339,141 @@ public class DiziTekrarEdenSayi {
 </details>     
                     
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
+  
+## :open_book: PRATİK 32 - Sayı Tahmin Oyunu
+
+### SORU :question:
+Java dilinde programın 0-100 arasında rastgele seçtiği bir sayıyı kullanıcının tahmin etmesini istediğimiz bir "Sayı Tahmin Oyunu" yapıyoruz.
+  
+  
+<details>
+<summary>Örnek kod.</summary>
+  
+```java  
+
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Random rand = new Random();
+        int number = rand.nextInt(100);
+        //int number = (int) (Math.random() * 100);
+
+        Scanner input = new Scanner(System.in);
+        int right = 0;
+        int selected;
+        int[] wrong = new int[5];
+        boolean isWin = false;
+        boolean isWrong = false;
+
+        System.out.println(number);
+        while (right < 5) {
+            System.out.print("Lütfen tahmininizi giriniz : ");
+            selected = input.nextInt();
+
+            if (selected < 0 || selected > 99) {
+                System.out.println("Lütfen 0-100 arasında bir değer giriniz.");
+                if (isWrong) {
+                    right++;
+                    System.out.println("Çok fazla hatalı giriş yaptınız. Kalan hak : " + (5 - right));
+                } else {
+                    isWrong = true;
+                    System.out.println("Bir daha hatalı girişinizde hakkınızdan düşülecektir.");
+                }
+                continue;
+            }
+
+            if (selected == number) {
+                System.out.println("Tebrikler, doğru tahmin ! Tahmin ettiğini sayı : " + number);
+                isWin = true;
+                break;
+            } else {
+                System.out.println("Hatalı bir sayı girdiniz !");
+                if (selected > number) {
+                    System.out.println(selected + " sayısı, gizli sayıdan büyüktür.");
+                } else {
+                    System.out.println(selected + " sayısı, gizli sayıdan küçüktür.");
+                }
+
+                wrong[right++] = selected;
+                System.out.println("Kalan hakkı : " + (5 - right));
+            }
+        }
+
+        if (!isWin) {
+            System.out.println("Kaybettiniz ! ");
+            if (!isWrong) {
+                System.out.println("Tahminleriniz : " + Arrays.toString(wrong));
+            }
+        }
+
+    }
+}  
+  
+```
+</details>   
+    
+### :green_square: CEVAP
+          
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package Pratik32;
+
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
+
+public class SayiTahminOyunu {
+    public static void main(String[] args) {
+
+        int prediction;
+        int right = 0;
+        Random rNumber = new Random();
+        int targetNumber = rNumber.nextInt(100);
+        int[] wrong = new int[5];
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("\nSayı tahmin oyununa hoşgeldiniz!!!\n");
+        System.out.println("Kurallar: \n*Lütfen 0-100 arasında bir sayı giriniz. \n*Toplamda 5 tahmin hakkınız bulunmaktadır. \nİyi eğlenceler :)\n");
+
+        //System.out.println("Hedef sayı : " + targetNumber);
+
+        while (right < 5) {
+            System.out.print("Lütfen tahmin ettiğiniz sayıyı giriniz : ");
+            prediction = input.nextInt();
+            if (prediction >= 0 && prediction <= 100) {
+
+                wrong[right] = prediction;
+
+                if (targetNumber == prediction) {
+                    System.out.println("Tebrikler tahmininiz doğru :) Sayı : " + targetNumber);
+                    break;
+                } else if (prediction > targetNumber) {
+                    System.out.println("Tahmin ettiğiniz sayı " + prediction + " bulunmak istenen sayıdan (X) BÜYÜKTÜR.");
+                    System.out.println("Kalan hakkınız : " + (5 - (++right)));
+                } else {
+                    System.out.println("Tahmin ettiğiniz sayı " + prediction + " bulunmak istenen sayıdan (X) KÜÇÜKTÜR.");
+                    System.out.println("Kalan hakkınız : " + (5 - (++right)));
+                }
+            } else {
+                System.out.println("Lütfen 0-100 arasında bir sayı giriniz!!!");
+            }
+            if (right == 5) {
+                System.out.println("\nKaybettiniz :( Tahmin edilmesi istenen sayı : " + targetNumber);
+                System.out.println("Tahminleriniz : " + Arrays.toString(wrong));
+            }
+        }
+    }
+}
+  
+```
+</details>     
+                    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
 
 ## :open_book: ÖDEV 1	- Vücut Kitle İndeksi Hesaplama
 
