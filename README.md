@@ -22,7 +22,7 @@ Bu repo [Kodluyoruz](Kodluyoruz.org) Java 101 eğitimi için hazırlamış oldu�
 | [PRATİK 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-14--girilen-say%C4%B1dan-k%C3%BC%C3%A7%C3%BCk-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program| [ÖDEV 14](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-14--dizideki-elemanlar%C4%B1-s%C4%B1ralama) - Dizideki Elemanları Sıralama|
 | [PRATİK 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-15--fakt%C3%B6riyel-hesaplayan-program) - Faktöriyel Hesaplayan Program| [ÖDEV 15](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-15--dizideki-elemanlar%C4%B1n-frekans%C4%B1) - Dizideki Elemanların Frekansı|
 | [PRATİK 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-16--%C3%BCsl%C3%BC-say%C4%B1-hesaplayan-program) - Üslü Sayı Hesaplayan Program| [ÖDEV 16](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-16--matris-transpozunu-bulma) - Matris Transpozunu Bulma|
-| [PRATİK 17](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-17---armstrong-say%C4%B1lar%C4%B1-bulan-program) - Armstrong Sayıları Bulan Program|
+| [PRATİK 17](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-17---armstrong-say%C4%B1lar%C4%B1-bulan-program) - Armstrong Sayıları Bulan Program| [BİTİRME PROJESİ](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev#open_book-%C3%B6dev-16--matris-transpozunu-bulma) - Mayın Tarlası Oyunu|
 | [PRATİK 18](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-18--harmonik-say%C4%B1lar%C4%B1-bulan-program) - Harmonik Sayıları Bulan Program|
 | [PRATİK 19](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-19---y%C4%B1ld%C4%B1z-ile-%C3%BC%C3%A7gen-yap%C4%B1m%C4%B1) - Yıldız ile Üçgen Yapımı|
 | [PRATİK 20](https://github.com/Ramedeus/Java_101_Kodluyoruz_Patika.dev/blob/main/README.md#open_book-prati%CC%87k-20---atm-projesi) - ATM Projesi|
@@ -4768,6 +4768,354 @@ public class MatrisTranspozunuBulma {
 
 ```
 </details>   
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+  
+## :open_book: BİTİRME PROJESİ	- Mayın Tarlası Oyunu
+
+### SORU :question:
+Java dilinde Mayın Tarlası oyunu yapmanızı bekliyoruz.
+
+  
+:interrobang: Oyun Kuralları :
+
+- Oyun metin tabanlıdır.   
+- Çift boyutlu diziler üzerinden oynanmalı ve MineSweeper sınıfı içerisinde tasarlanmalı.   
+- Matris boyutunu yani satır ve sütun sayısını kullanıcı belirlemeli.   
+- Diziye ait eleman sayısının çeyreği (elemanSayisi / 4) kadar rastgele mayın yerleştirilmeli. Örneğin dizi 4x3 boyutunda ise eleman sayısı (satırSayısı * sütunSayısı) formülü ile hesaplanmalı ve boyutu 12 olmalı. Bu durumda mayın sayısı 12 / 4 = 3 adet olmalıdır. (ipucu : bu mayınların konumlarını tutacak ikinci bir dizi oluşturabilirsiniz.)   
+- Kullanıcı matris üzerinden bir nokta seçmeli. Nokta seçimi için satır ve sütun değerlerini girmeli.   
+- Seçilen noktanın dizinin sınırları içerisinde olup olmadığını kontrol edilmeli ve koşul sağlanmazsa tekrar nokta istenmeli.   
+- Kullanıcının girdiği noktada mayın var ise oyunu kaybetmeli.   
+- Mayın yok ise, ilgili noktaya değen tüm konumlarına bakılmalı (sağı,solu,yukarısı,aşağısı,sol üst çapraz,sağ üst çapraz,sağ alt çapraz,sol alt çapraz) ve etrafındaki mayınların sayısının toplamı ilgili noktaya yazılmalı. Noktaya değen herhangi bir mayın yok ise "0" değeri atanmalı.   
+- Kullanıcı hiç bir mayına basmadan tüm noktaları seçebilirse oyunu kazanmalı.   
+  
+:heavy_check_mark: Kaybetme Senaryosu      
+```
+Mayınların Konumu
+* - - 
+- - * 
+- - - 
+===========================
+Mayın Tarlası Oyuna Hoşgeldiniz !
+- - - 
+- - - 
+- - - 
+Satır Giriniz : 0
+Sütun Giriniz : 1
+===========================
+- 2 - 
+- - - 
+- - - 
+Satır Giriniz : 2
+Sütun Giriniz : 0
+===========================
+- 2 - 
+- - - 
+0 - - 
+Satır Giriniz : 0
+Sütun Giriniz : 2
+===========================
+- 2 1 
+- - - 
+0 - - 
+Satır Giriniz : 1
+Sütun Giriniz : 0
+===========================
+- 2 1 
+1 - - 
+0 - - 
+Satır Giriniz : 2
+Sütun Giriniz : 1
+===========================
+- 2 1 
+1 - - 
+0 1 - 
+Satır Giriniz : 2
+Sütun Giriniz : 2
+===========================
+- 2 1 
+1 - - 
+0 1 1 
+Satır Giriniz : 1
+Sütun Giriniz : 2
+Game Over!!
+=========================== 
+```  
+  
+:heavy_check_mark: Kazanma Senaryosu
+```
+Mayınların Konumu
+- - - 
+- * - 
+- * - 
+===========================
+Mayın Tarlası Oyuna Hoşgeldiniz !
+- - - 
+- - - 
+- - - 
+Satır Giriniz : 0
+Sütun Giriniz : 0
+===========================
+1 - - 
+- - - 
+- - - 
+Satır Giriniz : 0
+Sütun Giriniz : 1
+===========================
+1 1 - 
+- - - 
+- - - 
+Satır Giriniz : 0
+Sütun Giriniz : 2
+===========================
+1 1 1 
+- - - 
+- - - 
+Satır Giriniz : 1
+Sütun Giriniz : 0
+===========================
+1 1 1 
+2 - - 
+- - - 
+Satır Giriniz : 2
+Sütun Giriniz : 0
+===========================
+1 1 1 
+2 - - 
+2 - - 
+Satır Giriniz : 1
+Sütun Giriniz : 2
+===========================
+1 1 1 
+2 - 2 
+2 - - 
+Satır Giriniz : 2
+Sütun Giriniz : 2
+Oyunu Kazandınız !
+1 1 1 
+2 - 2 
+2 - 2 
+===========================   
+```   
+  
+### :green_square: CEVAP
+  
+:exclamation: MAIN
+  
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package BitirmeProjesi;
+
+public class Main {
+    public static void main(String[] args) {
+        MineSweeper mine = new MineSweeper(4, 4);
+        mine.run();
+    }
+}
+
+```
+</details> 
+  
+:exclamation: MINESWEEPER
+  
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+  
+```java
+package BitirmeProjesi;
+
+import java.util.Scanner;
+
+public class MineSweeper {
+
+    int rowNumber;
+    int colNumber;
+    String[][] answerBoard;
+    String[][] board;
+
+    int mineNumber;
+    int mineCount = 0;
+    int correctAnswer = 0;
+    int row;
+    int column;
+    int rowMaxLimit;
+    int rowMinLimit;
+    int columnMaxLimit;
+    int columnMinLimit;
+
+    MineSweeper(int rowNumber, int colNumber) {
+        this.rowNumber = rowNumber;
+        this.colNumber = colNumber;
+        this.answerBoard = new String[rowNumber][colNumber];
+        this.board = new String[rowNumber][colNumber];
+        this.mineNumber = (rowNumber * colNumber) / 4;
+
+    }
+
+    void fillArr() {
+        for (int i = 0; i < this.rowNumber; i++) {
+            for (int j = 0; j < this.colNumber; j++) {
+                this.answerBoard[i][j] = "-";
+                this.board[i][j] = "-";
+            }
+        }
+    }
+
+    void placeMines() {
+
+        for (int i = 0; i < this.mineNumber; i++) {
+            double row = Math.random() * this.rowNumber;
+            double column = Math.random() * this.colNumber;
+            if (this.answerBoard[(int) row][(int) column].equals("*")) {
+                i--;
+            }
+            this.answerBoard[(int) row][(int) column] = "*";
+        }
+    }
+
+    void findMines() {
+        this.rowMaxLimit = this.row + 1;
+        this.rowMinLimit = this.row - 1;
+        this.columnMaxLimit = this.column + 1;
+        this.columnMinLimit = this.column - 1;
+
+        if (this.rowMinLimit < 0) {
+            this.rowMinLimit++;
+        }
+        if (this.rowMaxLimit > this.answerBoard[0].length - 1) {
+            this.rowMaxLimit--;
+        }
+        if (this.columnMinLimit < 0) {
+            this.columnMinLimit++;
+        }
+        if (this.columnMaxLimit > this.answerBoard.length - 1) {
+            this.columnMaxLimit--;
+        }
+
+        for (int i = this.rowMinLimit; i <= this.rowMaxLimit; i++) {
+            for (int j = this.columnMinLimit; j <= this.columnMaxLimit; j++) {
+                if (this.answerBoard[i][j].equals("*")) {
+                    this.mineCount++;
+                }
+            }
+        }
+        this.board[this.row][this.column] = Integer.toString(this.mineCount);
+        this.mineCount = 0;
+
+    }
+
+    void showBoard() {
+        for (int i = 0; i < this.rowNumber; i++) {
+            for (int j = 0; j < this.colNumber; j++) {
+                System.out.print(this.board[i][j]);
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+    void showAnswerBoard() {
+        System.out.println("Mayınların Konumu");
+        for (int i = 0; i < this.rowNumber; i++) {
+            for (int j = 0; j < this.colNumber; j++) {
+                System.out.print(this.answerBoard[i][j]);
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+    void run() {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Mayın Tarlası Oyununa Hoşgeldiniz !");
+
+        fillArr();
+        placeMines();
+        showAnswerBoard();
+
+
+        while (this.correctAnswer < (this.rowNumber * this.colNumber) - this.mineNumber) {
+            System.out.println("=================");
+            showBoard();
+
+            System.out.print("Satır Giriniz : ");
+            this.row = input.nextInt();
+
+            System.out.print("Sütun Giriniz : ");
+            this.column = input.nextInt();
+
+
+            if (this.row >= 0 && this.row < this.board[0].length) {
+                if (this.column >= 0 && this.column < this.board.length) {
+                    findMines();
+                    this.correctAnswer++;
+                    if (this.correctAnswer == (this.rowNumber * this.colNumber) - this.mineNumber) {
+                        System.out.println("=====================================================");
+                        System.out.println("Son Tablo");
+                        showBoard();
+
+                        String art = """
+                                                                 .''.
+                                       .''.             *''*    :_\\/_:     .\s
+                                      :_\\/_:   .    .:.*_\\/_*   : /\\ :  .'.:.'.
+                                  .''.: /\\ : _\\(/_  ':'* /\\ *  : '..'.  -=:o:=-
+                                 :_\\/_:'.:::. /)\\*''*  .|.* '.\\'/.'_\\(/_'.':'.'
+                                 : /\\ : :::::  '*_\\/_* | |  -= o =- /)\\    '  *
+                                  '..'  ':::'   * /\\ * |'|  .'/.\\'.  '._____
+                                      *        __*..* |  |     :      |.   |' .---"|
+                                       _*   .-'   '-. |  |     .--'|  ||   | _|    |
+                                    .-'|  _.|  |    ||   '-__  |   |  |    ||      |
+                                    |' | |.    |    ||       | |   |  |    ||      |
+                                 ___|  '-'     '    ""       '-'   '-.'    '`      |____
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                          !!! Tebrikler oyunu kazandınız !!!
+                                """;
+
+                        for (int i = 0; i < art.length(); i++) {
+                            System.out.print(art.charAt(i));
+                        }
+                    }
+
+                    if (this.answerBoard[this.row][this.column].equals("*")) {
+                        System.out.println("=================");
+                        showAnswerBoard();
+
+                        String art = """
+                                     _.-^^---....,,--      \s
+                                 _--                  --_ \s
+                                <      MAYINA BASTIN     >)
+                                |    !!! GAME OVER !!!    |\s
+                                 \\._                   _./ \s
+                                    ```--. . , ; .--'''      \s
+                                          | |   |            \s
+                                       .-=||  | |=-.  \s
+                                       `-=#$%&%$#=-'  \s
+                                          | ;  :|    \s
+                                 _____.,-#%&$@%#&#~,._____
+                                """;
+
+                        for (int i = 0; i < art.length(); i++) {
+                            System.out.print(art.charAt(i));
+                        }
+                        break;
+                    }
+
+                } else {
+                    System.out.println("Lütfen geçerli bir indis değeri giriniz !!!");
+                }
+            } else {
+                System.out.println("Lütfen geçerli bir indis değeri giriniz !!!");
+            }
+        }
+    }
+}
+
+```
+</details>  
+  
   
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
   
